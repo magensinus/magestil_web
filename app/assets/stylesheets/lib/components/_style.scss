@@ -1,16 +1,21 @@
-// Sponsors
+// Template
 
-$class: "social";
+$class: "style";
 
 .#{$class} {
-  float: right;
+  float: left;
+  width: 100%;
   .#{$class}-box {
-    @include clear-list;
     float: left;
-    padding: 4px;
+    width: 100%;
     .#{$class}-item {
       float: left;
-      padding: 4px;
+      width: 100%;
+      .#{$class}-chip {
+        float: left;
+        height: 48px;
+        width: 100%;
+      }
     }
   }
 }

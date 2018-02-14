@@ -1,0 +1,66 @@
+// Template
+
+$class: "menu-dropdown";
+
+.#{$class} {
+  background-color: $gray-lightest;
+  display: none;
+  float: left;
+  padding: 12px;
+  position: absolute;
+  top: 48px;
+  width: 240px;
+  z-index: 99999;
+  .#{$class}-box {
+    @include clear-list;
+    float: left;
+    width: 100%;
+    .#{$class}-item {
+      float: left;
+      padding: 4px;
+      width: 100%;
+      .link {
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

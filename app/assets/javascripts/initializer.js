@@ -2,10 +2,14 @@
 
 bindEvents = function() {
   $(".panel-one").setPanel({
-    trim: 138
+    trim: 206
   });
   $(".panel-two").setPanel({
     trim: 138
+  });
+  $(".menu-dropdown").altaiToggle({
+    effect: "fade",
+    klass: ".menu-dropdown-trigger"
   });
 };
 
