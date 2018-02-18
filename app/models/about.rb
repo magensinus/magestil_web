@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class Home < ApplicationRecord
+class About < ApplicationRecord
   # Table name
-  self.table_name = "magestil_home"
+  self.table_name = "magestil_about"
 
   # Concerns
   include Slug
