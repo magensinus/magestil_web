@@ -8,5 +8,5 @@ class Network < ApplicationRecord
   include Slug
 
   # Uploaders
-  mount_uploader :thumb_box, Magensinus::ThumbUploader
+  mount_uploader :thumb_box, Magestil::ThumbUploader
 end
