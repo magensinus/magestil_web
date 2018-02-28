@@ -15,8 +15,12 @@ h6 {
 h1 {
   font-size: 32px;
   line-height: 40px;
-  .small {
+  &.small {
     font-size: 24px;
+  }
+  &.extra-large {
+    font-size: 64px;
+    line-height: 72px;
   }
 }
 

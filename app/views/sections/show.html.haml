@@ -1,0 +1,28 @@
+// Index
+
+- content_for :breadcrumbs do
+  .breadcrumbs
+    %ul.breadcrumbs-box
+      %li.breadcrumbs-item
+        = link_to "Voltar", course_path(@academy_course), class: "link mono tiny"
+
+.panel-one
+  .main.col-960-1.left
+    .main-box.col-960-1
+      .main-item.col-960-1
+        %h1= @academy_course.title
+  %hr.separator.large
+  .main.col-240-1.right
+    .main-box.col-240-1
+      - @academy_course_sections.each do |object|
+        .main-item.col-240-1
+          = link_to object.title, course_section_path(@academy_course, object), class: "link small"
+      .main-item.col-240-1
+        = link_to "Tutores", course_tutors_path(@academy_course), class: "link small"
+      - if @academy_course.document_box.presence
+        .main-item.col-240-1
+          = link_to "Descarregar PDF", @academy_course.document_box.url.to_s, class: "link small", target: "_blank"
+  .main.col-720-1.left
+    .main-box.col-720-1
+      .main-item.col-720-1
+        %h3= @academy_course_section.title

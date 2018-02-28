@@ -1,7 +1,10 @@
 pt:
-  primary_urls:
+  urls:
     home: "Home"
     about: "Quem Somos"
+    campus: "Instalações"
+    equipment: "Equipamento"
+    partnerships: "Parcerias"
     quality: "Qualidade"
     courses: "Cursos"
     articles: "Notícias"

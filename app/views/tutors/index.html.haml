@@ -1,0 +1,20 @@
+// Index
+
+- content_for :breadcrumbs do
+  .breadcrumbs
+    %ul.breadcrumbs-box
+      %li.breadcrumbs-item
+        = link_to "Voltar", course_sections_path(@academy_course), class: "link mono tiny"
+
+.panel-one
+  .main.col-960-1.left
+    .main-box.col-960-1
+      .main-item.col-960-1
+        %h1= @academy_course.title
+  %hr.separator.large
+  .main.col-960-1
+    .main-box.col-960-1
+      - @academy_course_tutors.each do |object|
+        - if object.tutor.name.presence
+          .main-item.col-960-4
+            %h3= object.tutor.name

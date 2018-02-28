@@ -1,0 +1,11 @@
+// Index
+
+.panel-one
+  .main.col-960-1
+    .main-box.col-960-1
+      - if @campus.title.presence
+        .main-item.col-960-1
+          %h1= @campus.title
+      - if @campus.description.presence
+        .main-item.col-960-1
+          %p.medium= @campus.description

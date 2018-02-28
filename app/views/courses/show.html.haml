@@ -11,26 +11,12 @@
     .main-box.col-960-1
       - if @academy_course.title.presence
         .main-item.col-960-1
-          %h1= @academy_course.title
+          %h1.extra-large= @academy_course.title
+  .main.col-960-2
+    .main-box.col-960-2
       - if @academy_course.description.presence
-        .main-item.col-960-1
-          %p.medium= @academy_course.description
-
-      - if @academy_course.misc.presence
-        .main-item.col-960-4
-          .menu-aside
-            .menu-aside-box
-              .menu-aside-item
-                = link_to @academy_course.document_box.url.to_s, class: "button tiny left wide", target: "_blank" do
-                  - if @academy_course.document_caption.presence
-                    = @academy_course.document_caption
-                  - else
-                    Descarregar PDF
-              .menu-aside-item
-                = link_to "Somewhere", "#", class: "button tiny left wide"
-        .main-item.col-960-4-3
-          .misc
-            .misc-box
-              .misc-item
-                .trix
-                  = safe_join(@academy_course.misc)
+        .main-item.col-960-2
+          %p.small= @academy_course.description
+      - if @academy_course.presence
+        .main-item.col-960-2
+          = link_to t("read_more"), course_sections_path(@academy_course), class: "button tiny left"
