@@ -1,7 +1,4 @@
+// Index
+
 .panel-one
-  .main
-    .main-box
-      .main-item
-        %h1= @home.title
-      .main-item
-        %p.large= @home.description
+  = render "home", object: @home

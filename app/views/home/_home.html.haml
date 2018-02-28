@@ -1,0 +1,10 @@
+// Home
+
+.main.col-960-2
+  .main-box.col-960-2
+    - if object.title.presence
+      .main-item.col-960-2
+        %h1.extra-large= object.title
+    - if object.description.presence
+      .main-item.col-960-2
+        %p.small= object.description

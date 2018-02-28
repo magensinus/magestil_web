@@ -1,11 +1,4 @@
 // Index
 
 .panel-one
-  .main.col-960-1
-    .main-box.col-960-1
-      - if @partnerships.title.presence
-        .main-item.col-960-1
-          %h1= @partnerships.title
-      - if @partnerships.description.presence
-        .main-item.col-960-1
-          %p.medium= @partnerships.description
+  = render "partnerships", object: @partnerships

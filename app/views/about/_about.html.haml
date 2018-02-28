@@ -1,0 +1,11 @@
+// About
+
+.main.col-960-1
+  .main-box.col-960-1
+    - if object.title.presence
+      .main-item.col-960-1
+        %h1= object.title
+    - if object.body.presence
+      .main-item.col-960-1
+        .trix
+          = safe_join([object.body.html_safe])
