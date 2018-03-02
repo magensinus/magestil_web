@@ -40,4 +40,10 @@
   del {
     text-decoration: line-through;
   }
+  img,
+  iframe {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
 }

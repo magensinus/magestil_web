@@ -6,6 +6,9 @@
   font-size: 18px;
   margin: 0;
   padding: 0;
+  &.wide {
+    width: 100%;
+  }
   &.no-underline {
     text-decoration: none;
   }

@@ -1,22 +1,6 @@
 // Show
 
-- content_for :breadcrumbs do
-  .breadcrumbs
-    %ul.breadcrumbs-box
-      %li.breadcrumbs-item
-        = link_to "Voltar", categories_path, class: "link mono tiny"
+= render "breadcrumbs"
 
 .panel-one
-  .main.col-960-1
-    .main-box.col-960-1
-      - if @academy_course.title.presence
-        .main-item.col-960-1
-          %h1.extra-large= @academy_course.title
-  .main.col-960-2
-    .main-box.col-960-2
-      - if @academy_course.description.presence
-        .main-item.col-960-2
-          %p.small= @academy_course.description
-      - if @academy_course.presence
-        .main-item.col-960-2
-          = link_to t("read_more"), course_sections_path(@academy_course), class: "button tiny left"
+  = render "courses", object: @academy_course

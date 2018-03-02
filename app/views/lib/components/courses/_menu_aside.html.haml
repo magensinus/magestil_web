@@ -1,0 +1,13 @@
+// Menu aside
+
+.menu-aside.col-240-1-1.left
+  .menu-aside-box.col-240-1-1
+    - objects.each do |object|
+      .menu-aside-item.col-240-1-1
+        = link_to object.title, course_section_path(parent, object), class: "link small wide left"
+    - if parent.tutors.presence
+      .menu-aside-item.col-240-1-1
+        = link_to "Tutores", course_tutors_path(parent), class: "link small wide left"
+    - if parent.document_box.presence
+      .menu-aside-item.col-240-1-1
+        = link_to "Descarregar PDF", parent.document_box.url.to_s, class: "link small wide left", target: "_blank"

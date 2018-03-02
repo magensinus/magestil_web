@@ -8,10 +8,11 @@ $class: "menu-aside";
   .#{$class}-box {
     @include clear-list;
     float: left;
+    padding: 4px;
     width: 100%;
     .#{$class}-item {
       float: left;
-      padding: 8px;
+      padding: 4px;
       width: 100%;
     }
   }

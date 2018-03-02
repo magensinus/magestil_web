@@ -7,6 +7,7 @@ class TutorsController < ApplicationController
   # GET /academy_course_tutors
   def index
     @academy_course_tutors ||= @academy_course.course_tutors.includes(:tutor).all
+    @academy_course_sections = @academy_course.sections.all
   end
 
   private
