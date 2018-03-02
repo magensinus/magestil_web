@@ -4,11 +4,11 @@ module UrlHelper
   # Fetch primary url's
   def fetch_primary_urls
     [
-      { title: t("urls.about"),      url: about_index_path,      id: 1 },
-      { title: t("urls.courses"),    url: categories_path,       id: 2 },
-      { title: t("urls.articles"),   url: articles_path,         id: 3 },
-      { title: t("urls.contact"),    url: contact_index_path,    id: 4 },
-      { title: t("urls.newsletter"), url: newsletter_index_path, id: 5 }
+      # { title: t("urls.about"),      url: about_index_path,      id: 1 },
+      { title: t("urls.courses"),    url: categories_path,       id: 2 }
+      # { title: t("urls.articles"),   url: articles_path,         id: 3 },
+      # { title: t("urls.contact"),    url: contact_index_path,    id: 4 },
+      # { title: t("urls.newsletter"), url: newsletter_index_path, id: 5 }
     ]
   end
 
