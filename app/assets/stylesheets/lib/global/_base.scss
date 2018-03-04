@@ -35,3 +35,61 @@ img {
   padding: 0;
   vertical-align: middle;
 }
+
+.theme {
+  float: left;
+  width: 100%;
+  &.home {
+    background-image: url("billboard.jpg");
+    background-image: image-url("billboard.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    // background-color: red;
+    // background-color: linear-gradient(yellow, red);
+  }
+}
+
+.icon {
+  background: red;
+  float: left;
+  margin: 0 8px 0 0;
+  width: 96px;
+  height: 96px;
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .icon {
+    @include hide-block-element;
+  }
+  .theme {
+    &.home {
+      background-image: none;
+      background-image: none;
+      background-position: top center;
+      background-repeat: no-repeat;
+
+      background-color: red;
+      background-color: linear-gradient(yellow, red);
+    }
+  }
+}
+
+@media #{$small} {
+  .icon {
+    @include hide-block-element;
+  }
+  .theme {
+    &.home {
+      background-color: red;
+      background-color: linear-gradient(yellow, red);
+    }
+  }
+}
+
+@media #{$medium} {
+}
+
+@media #{$large} {
+}

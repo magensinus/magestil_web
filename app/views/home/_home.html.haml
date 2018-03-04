@@ -1,10 +1,7 @@
 // Home
 
-.main.col-960-2-1
-  .main-box.col-960-2-1
-    - if object.title.presence
-      .main-item.col-960-2-1
-        %h1.extra-large= object.title
-    - if object.description.presence
-      .main-item.col-960-2-1
-        %p.small= object.description
+.billboard
+  .billboard-box
+    .billboard-item
+      - if object.title.presence
+        %h1.extra-large.left= object.title

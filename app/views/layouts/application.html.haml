@@ -6,27 +6,30 @@
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
-  %body
+  %body.home
     // Header
     .universal#header
       .universal-box
         .universal-item
           = render "lib/components/brand"
           = render "lib/components/menu"
-    // Container top
-    .universal#container-top
-      .universal-box
-        .universal-item
-          = yield :breadcrumbs
-    // Container
-    .universal#container
-      .universal-box
-        .universal-item
-          = yield
-    // Container bottom
-    .universal#container-bottom
-      .universal-box
-        .universal-item
+    // Theme
+    .theme.home
+      .panel-one
+        // Container top
+        .universal#container-top
+          .universal-box
+            .universal-item
+              = yield :breadcrumbs
+        // Container
+        .universal#container
+          .universal-box
+            .universal-item
+              = yield
+        // Container bottom
+        .universal#container-bottom
+          .universal-box
+            .universal-item
     // Footer
     .universal#footer
       .universal-box

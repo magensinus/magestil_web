@@ -1,0 +1,64 @@
+// Billboard
+
+$class: "billboard";
+
+.#{$class} {
+  float: left;
+  width: 480px;
+  .#{$class}-box {
+    float: left;
+    width: 100%;
+    .#{$class}-item {
+      float: left;
+      padding: 8px;
+      width: 100%;
+      &.top {
+        min-height: 204px;
+      }
+      &.middle {
+        margin: 16px 0 0;
+      }
+      &.bottom {
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .#{$class} {
+    width: 240px;
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

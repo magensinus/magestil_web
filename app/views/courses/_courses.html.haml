@@ -1,16 +1,13 @@
 // Courses
 
-.main.col-960-1-1
-  .main-box.col-960-1-1
-    - if object.title.presence
-      .main-item.col-960-1-1
-        %h1.extra-large= object.title if object.title.presence
-
-.main.col-960-2-1
-  .main-box.col-960-2-1
-    - if object.description.presence
-      .main-item.col-960-2-1
+.billboard
+  .billboard-box
+    .billboard-item.top
+      - if object.title.presence
+        // .icon
+        %h1.large= object.title
+    .billboard-item.middle
+      - if object.description.presence
         %p.small= object.description
-    - if object.presence
-      .main-item.col-960-2-1
-        = link_to t("read_more"), course_sections_path(object), class: "button tiny left"
+    .billboard-item.bottom
+      = link_to t("read_more"), course_sections_path(object), class: "button tiny left"

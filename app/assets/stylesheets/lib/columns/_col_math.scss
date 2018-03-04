@@ -25,9 +25,51 @@
 // Media Queries
 
 @media #{$tiny} {
+  .#{$class}-1-1 { width: (($width / 1) * 1); }
+  .#{$class}-2-1 { width: (($width / 1) * 1); }
+  .#{$class}-2-2 { width: (($width / 1) * 1); }
+  .#{$class}-3-1 { width: (($width / 1) * 1); }
+  .#{$class}-3-2 { width: (($width / 1) * 1); }
+  .#{$class}-3-3 { width: (($width / 1) * 1); }
+  .#{$class}-4-1 { width: (($width / 1) * 1); }
+  .#{$class}-4-2 { width: (($width / 1) * 1); }
+  .#{$class}-4-3 { width: (($width / 1) * 1); }
+  .#{$class}-4-4 { width: (($width / 1) * 1); }
+  .#{$class}-5-1 { width: (($width / 1) * 1); }
+  .#{$class}-5-2 { width: (($width / 1) * 1); }
+  .#{$class}-5-3 { width: (($width / 1) * 1); }
+  .#{$class}-5-4 { width: (($width / 1) * 1); }
+  .#{$class}-5-5 { width: (($width / 1) * 1); }
+  .#{$class}-6-1 { width: (($width / 1) * 1); }
+  .#{$class}-6-2 { width: (($width / 1) * 1); }
+  .#{$class}-6-3 { width: (($width / 1) * 1); }
+  .#{$class}-6-4 { width: (($width / 1) * 1); }
+  .#{$class}-6-5 { width: (($width / 1) * 1); }
+  .#{$class}-6-6 { width: (($width / 1) * 1); }
 }
 
 @media #{$small} {
+  .#{$class}-1-1 { width: (($width / 1) * 1); }
+  .#{$class}-2-1 { width: (($width / 1) * 1); }
+  .#{$class}-2-2 { width: (($width / 1) * 1); }
+  .#{$class}-3-1 { width: (($width / 1) * 1); }
+  .#{$class}-3-2 { width: (($width / 1) * 1); }
+  .#{$class}-3-3 { width: (($width / 1) * 1); }
+  .#{$class}-4-1 { width: (($width / 1) * 1); }
+  .#{$class}-4-2 { width: (($width / 1) * 1); }
+  .#{$class}-4-3 { width: (($width / 1) * 1); }
+  .#{$class}-4-4 { width: (($width / 1) * 1); }
+  .#{$class}-5-1 { width: (($width / 1) * 1); }
+  .#{$class}-5-2 { width: (($width / 1) * 1); }
+  .#{$class}-5-3 { width: (($width / 1) * 1); }
+  .#{$class}-5-4 { width: (($width / 1) * 1); }
+  .#{$class}-5-5 { width: (($width / 1) * 1); }
+  .#{$class}-6-1 { width: (($width / 1) * 1); }
+  .#{$class}-6-2 { width: (($width / 1) * 1); }
+  .#{$class}-6-3 { width: (($width / 1) * 1); }
+  .#{$class}-6-4 { width: (($width / 1) * 1); }
+  .#{$class}-6-5 { width: (($width / 1) * 1); }
+  .#{$class}-6-6 { width: (($width / 1) * 1); }
 }
 
 @media #{$medium} {
