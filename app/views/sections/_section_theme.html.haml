@@ -1,0 +1,16 @@
+:coffee
+  bindWidths = ->
+    setTheme = $(".set-theme").css
+    $windowSize = $(this).width()
+    $(".set-theme").css
+      "background": "red"
+      "background": "linear-gradient(yellow, red)"
+    return
+  $(document).on 'turbolinks:load', ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return
+  $(window).resize ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return

@@ -1,0 +1,9 @@
+// Categories
+
+.academy-categories.col-960-1-1
+  - if objects.presence
+    .academy-categories-box.col-960-1-1
+      - objects.each do |object|
+        - object.courses.each do |item|
+          .academy-categories-item{ style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
+            = link_to "Bibendum Vestibulum Sollicitudin Cras Etiam", course_path(item), class: "link medium"

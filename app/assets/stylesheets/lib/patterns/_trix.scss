@@ -46,4 +46,11 @@
     margin: 0;
     padding: 0;
   }
+  .text,
+  .video,
+  .document,
+  .video {
+    float: left;
+    width: 100%;
+  }
 }

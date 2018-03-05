@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Magestil
-  class ThumbUploader < ApplicationUploader
+  class ImageUploader < ApplicationUploader
     # Override the directory where uploaded files will be stored.
     # This is a sensible default for uploaders that are meant to be mounted:
     def store_dir
@@ -10,12 +10,12 @@ module Magestil
 
     # Provide a default URL as a default if there hasn't been a file uploaded:
     def default_url
-      "/images/fallback/" + [version_name, "magestil-thumb-default.png"].compact.join("_")
+      "/images/fallback/" + [version_name, "magestil-image-default.png"].compact.join("_")
     end
 
     # Prefix variable
     def prefix
-      "magestil-thumb-"
+      "magestil-image-"
     end
 
     # Original
@@ -48,6 +48,7 @@ module Magestil
       process resize_to_limit: [960, 1024]
     end
 
+    # Extension whitelist
     def extension_whitelist
       %w[gif png jpg jpeg]
     end

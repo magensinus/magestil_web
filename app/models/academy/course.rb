@@ -10,8 +10,15 @@ module Academy
 
     # Uploaders
     # ---------
+    # Thumb
+    mount_uploader :thumb_box, Academy::ThumbUploader
+    mount_uploader :thumb_box_magestil, Academy::ThumbUploader
+    # Cover
+    mount_uploader :cover_box, Academy::CoverUploader
+    mount_uploader :cover_box_magestil, Academy::CoverUploader
     # Document
     mount_uploader :document_box, Academy::DocumentUploader
+    mount_uploader :document_box_magestil, Academy::DocumentUploader
 
     # Scoping
     scope :published, -> { where(published: true, magestil: true).where("published_at <= ?", Time.zone.now).order(position: :asc) }

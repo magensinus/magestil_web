@@ -1,33 +1,33 @@
 // Section
 
-.main.col-960-1-1.left
+.main.col-960-1-1
   .main-box.col-960-1-1
     .main-item.col-960-1-1
       %h1.large.left
-        .icon
         = parent.title
+
 %hr.separator.medium
-.main.col-720-1-1.left
+
+.main.col-720-1-1
   .main-box.col-720-1-1
     .main-item.col-720-1-1
       %h3= object.title
     - object.section_assets.order(position: :asc).each do |asset|
-      - if asset.text == true
-        .main-item.col-720-1-1
+      .main-item.col-720-1-1
+        - if asset.text     == true
           .trix
-            = safe_join([asset.text_box.html_safe])
-      - if asset.image == true
-        .main-item.col-720-1-1
+            .text
+              = safe_join([asset.text_box.html_safe])
+        - if asset.image    == true
           .trix
             .image
               = image_tag asset.image_box_url.to_s, class: "left"
-      - if asset.document == true
-        .main-item.col-720-3-1
+        - if asset.document == true
           .trix
-            = link_to "Documento", asset.document_box.url.to_s, class: "button small wide left", target: "_blank"
-            %p= asset.document_caption if asset.document_caption.presence
-      - if asset.video == true
-        .main-item.col-720-1-1
+            .document
+              = link_to "Documento", asset.document_box.url.to_s, class: "button small wide left", target: "_blank"
+              %p= asset.document_caption if asset.document_caption.presence
+        - if asset.video    == true
           .trix
             .video
               %iframe#ytplayer{ allowfullscreen: "", frameborder: "0", height: "396", src: "https://www.youtube.com/embed/#{asset.video_box}", type: "text/html", width: "704" }

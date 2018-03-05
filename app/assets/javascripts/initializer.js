@@ -1,12 +1,7 @@
 // Initializer
 
 bindEvents = function() {
-  $(".panel-one").setPanel({
-    trim: 176
-  });
-  $(".panel-two").setPanel({
-    trim: 138
-  });
+  // $(".panel").setPanel({ trim: 176 });
   $(".menu-dropdown").altaiToggle({
     effect: "fade",
     klass: ".menu-dropdown-trigger"

@@ -4,6 +4,6 @@ class CategoriesController < ApplicationController
   # /categories
   def index
     @courses ||= Courses.first!
-    @categories ||= Academy::Category.where(published: true, magestil: true).includes(:courses)
+    @academy_categories ||= Academy::Category.where(published: true, magestil: true).includes(:courses)
   end
 end

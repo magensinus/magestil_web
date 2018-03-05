@@ -13,9 +13,8 @@
         .universal-item
           = render "lib/components/brand"
           = render "lib/components/menu"
-    // Theme
-    .theme.home
-      .panel-one
+    .panel
+      %div{ class: "theme #{ yield :theme_class if content_for?(:theme_class)}" }
         // Container top
         .universal#container-top
           .universal-box

@@ -1,3 +1,6 @@
 // Index
 
-= render "home", object: @home
+- content_for :theme_class do
+  set-theme
+= render "home",        object: @home
+= render "home_theme",  object: @home

@@ -18,6 +18,9 @@
 
 .byebug_history
 
+# Ignore cache
+.sass-cache
+
 # Ignore uploaded files
 /public/uploads
 

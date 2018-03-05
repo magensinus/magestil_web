@@ -1,0 +1,76 @@
+// Academy categories
+
+$class: "academy-categories";
+
+.#{$class} {
+  float: left;
+  .#{$class}-box {
+    float: left;
+    padding: 8px;
+    .#{$class}-item {
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: table;
+      float: left;
+      height: 266px;
+      width: 472px;
+      .link {
+        display: table-cell;
+        padding: 16px;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+      }
+      img {
+        height: 266px;
+        width: 472px;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        height: 126px;
+        width: 224px;
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        height: 261px;
+        width: 464px;
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        height: 198px;
+        width: 352px;
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        height: 266px;
+        width: 472px;
+      }
+    }
+  }
+}

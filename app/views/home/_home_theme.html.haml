@@ -1,0 +1,28 @@
+:coffee
+  bindWidths = ->
+    setTheme = $(".set-theme").css
+    $windowSize = $(this).width()
+    $(".set-theme").css
+      "background-position": "top center"
+      "background-repeat": "no-repeat"
+    if $windowSize <= 479
+      $(".set-theme").css
+        "background-image": "none"
+    else if $windowSize <= 719
+      $(".set-theme").css
+        "background-image": "none"
+    else if $windowSize <= 959
+      $(".set-theme").css
+        "background-image": "url(#{image_path object.image_box_url})"
+    else
+      $(".set-theme").css
+        "background-image": "url(#{image_path object.image_box_url})"
+    return
+  $(document).on 'turbolinks:load', ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return
+  $(window).resize ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return

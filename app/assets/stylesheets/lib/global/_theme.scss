@@ -1,0 +1,23 @@
+// Theme
+
+.theme {
+  float: left;
+  width: 100%;
+  &.set-theme {
+    min-height: 558px;
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+}
+
+@media #{$small} {
+}
+
+@media #{$medium} {
+}
+
+@media #{$large} {
+}
