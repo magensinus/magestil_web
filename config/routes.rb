@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :campus,        only: [:index],          controller: :campus
   resources :equipment,     only: [:index],          controller: :equipment
   resources :partnerships,  only: [:index],          controller: :partnerships
+  resources :students,      only: [:index],          controller: :students
+  resources :parents,       only: [:index],          controller: :parents
+  resources :tutors,        only: [:index],          controller: :tutors
   resources :courses,       only: [:show],           controller: :courses do
     resources :tutors,      only: [:index, :show],   controller: :tutors
     resources :sections,    only: [:index, :show],   controller: :sections

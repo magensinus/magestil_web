@@ -2,6 +2,9 @@ pt:
   urls:
     home: "Home"
     about: "Quem Somos"
+    students: "Alunos"
+    parents: "Pais"
+    tutors: "Professores"
     campus: "Instalações"
     equipment: "Equipamento"
     partnerships: "Parcerias"
