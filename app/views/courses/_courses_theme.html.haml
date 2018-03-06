@@ -1,28 +1,34 @@
-:coffee
-  bindWidths = ->
-    setTheme = $(".set-theme").css
-    $windowSize = $(this).width()
-    $(".set-theme").css
-      "background-position": "top center"
-      "background-repeat": "no-repeat"
-    if $windowSize <= 479
-      $(".set-theme").css
-        "background-image": "none"
-    else if $windowSize <= 719
-      $(".set-theme").css
-        "background-image": "none"
-    else if $windowSize <= 959
-      $(".set-theme").css
-        "background-image": "url(#{image_path object.cover_box_magestil_url})"
-    else
-      $(".set-theme").css
-        "background-image": "url(#{image_path object.cover_box_magestil_url})"
-    return
-  $(document).on 'turbolinks:load', ->
-    bindWidths()
-    Turbolinks.clearCache()
-    return
-  $(window).resize ->
-    bindWidths()
-    Turbolinks.clearCache()
-    return
+// Courses theme
+
+- if object.cover_box_magestil.presence
+  :coffee
+    bindWidths = ->
+      $windowSize = $(this).width()
+      $(".set-theme-#{object.slug}").css
+        "background-color": "#{object.gradient_color_one}"
+        "background-image": "url(" + "#{object.cover_box_magestil_url}" + ")"
+      return
+    $(document).on "turbolinks:load", ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return
+    $(window).resize ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return
+- else
+  :coffee
+    bindWidths = ->
+      $windowSize = $(this).width()
+      $(".set-theme-#{object.slug}").css
+        "background-color": "#{object.gradient_color_one}"
+        "background-image": "linear-gradient(#{object.gradient_color_one}, #{object.gradient_color_two})"
+      return
+    $(document).on "turbolinks:load", ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return
+    $(window).resize ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return

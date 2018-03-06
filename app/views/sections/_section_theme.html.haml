@@ -1,10 +1,9 @@
 :coffee
   bindWidths = ->
-    setTheme = $(".set-theme").css
     $windowSize = $(this).width()
-    $(".set-theme").css
-      "background": "red"
-      "background": "linear-gradient(yellow, red)"
+    $(".set-theme-#{object.slug}").css
+      "background": "#{parent.gradient_color_one}"
+      "background-image": "linear-gradient(#{parent.gradient_color_one}, #{parent.gradient_color_two})"
     return
   $(document).on 'turbolinks:load', ->
     bindWidths()

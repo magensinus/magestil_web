@@ -1,7 +1,7 @@
 // Show
 
 - content_for :theme_class do
-  set-theme
+  = "set-theme-#{@academy_course.slug}"
 = render "breadcrumbs"
 = render "courses",       object: @academy_course
 = render "courses_theme", object: @academy_course

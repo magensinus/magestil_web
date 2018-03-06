@@ -9,9 +9,9 @@ module Magestil
     end
 
     # Provide a default URL as a default if there hasn't been a file uploaded:
-    def default_url
-      "/images/fallback/" + [version_name, "magestil-thumb-default.png"].compact.join("_")
-    end
+    # def default_url
+    #   "/images/fallback/" + [version_name, "magestil-thumb-default.png"].compact.join("_")
+    # end
 
     # Prefix variable
     def prefix

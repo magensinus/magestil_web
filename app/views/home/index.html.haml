@@ -1,6 +1,6 @@
 // Index
 
 - content_for :theme_class do
-  set-theme
+  = "set-theme-#{@home.slug}"
 = render "home",        object: @home
 = render "home_theme",  object: @home

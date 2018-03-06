@@ -1,11 +1,11 @@
 // Theme
 
 .theme {
+  background-position: top center;
+  background-repeat: no-repeat;
   float: left;
+  min-height: 558px;
   width: 100%;
-  &.set-theme {
-    min-height: 558px;
-  }
 }
 
 // Media Queries
