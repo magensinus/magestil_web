@@ -6,7 +6,6 @@
       $windowSize = $(this).width()
       $(".set-theme-#{object.slug}").css
         "background-image": "image-url('#{object.image_box_url}')"
-        "background-image": "url('#{object.image_box_url}')"
       return
     $(document).on "turbolinks:load", ->
       bindWidths()
