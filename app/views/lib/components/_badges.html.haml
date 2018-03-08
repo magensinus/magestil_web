@@ -1,8 +1,11 @@
 // Badges
 
 - if fetch_badges.presence
-  %nav.badges
-    %ul.badges-box
-      - fetch_badges.each do |item|
-        %li.badges-item
-          = link_to image_tag(item.thumb_box.url.to_s), root_path, class: "link"
+  %hr.separator.medium
+  .center-parent
+    .center-child
+      %nav.badges
+        %ul.badges-box
+          - fetch_badges.each do |item|
+            %li.badges-item
+              = link_to image_tag(item.thumb_box.url.to_s, class: "left"), root_path, class: "link left"

@@ -10,4 +10,9 @@ module ApplicationHelper
   def fetch_categories
     @fetch_categories ||= Academy::Category.where(published: true, magestil: true)
   end
+
+  # Fetch networks
+  def fetch_networks
+    @fetch_networks = Network.all
+  end
 end

@@ -3,16 +3,31 @@
 $class: "sitemap";
 
 .#{$class} {
-  float: left;
+  float: right;
+  width: 720px;
   .#{$class}-box {
     @include clear-list;
     float: left;
-    padding: 4px;
+    padding: 6px;
+    width: 720px;
     .#{$class}-item {
       float: left;
-      padding: 4px;
+      padding: 2px;
+      width: 236px;
       .link {
-        float: left;
+        background-color: $black;
+        color: $white;
+        padding: 4px 8px;
+        text-decoration: none;
+        width: 100%;
+        &:link, &:visited {
+          background-color: $black;
+          color: $white;
+        }
+        &:hover, &:active {
+          background-color: $white;
+          color: $black;
+        }
       }
     }
   }
@@ -22,8 +37,11 @@ $class: "sitemap";
 
 @media #{$tiny} {
   .#{$class} {
+    width: 240px;
     .#{$class}-box {
+      width: 240px;
       .#{$class}-item {
+        width: 228px;
       }
     }
   }
@@ -31,8 +49,12 @@ $class: "sitemap";
 
 @media #{$small} {
   .#{$class} {
+    float: left;
+    width: 480px;
     .#{$class}-box {
+      width: 480px;
       .#{$class}-item {
+        width: 234px;
       }
     }
   }
@@ -40,8 +62,11 @@ $class: "sitemap";
 
 @media #{$medium} {
   .#{$class} {
+    width: 480px;
     .#{$class}-box {
+      width: 480px;
       .#{$class}-item {
+        width: 234px;
       }
     }
   }

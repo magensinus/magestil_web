@@ -1,7 +1,6 @@
 // Brand
 
-- cache "brand" do
-  .brand
-    %ul.brand-box
-      %li.brand-item
-        = link_to image_tag("rectangle.png", size: "135x16"), root_path, class: "link"
+.brand
+  .brand-box
+    .brand-item
+      = link_to image_tag("rectangle.png", size: "135x16", class: "left"), root_path, class: "link left"

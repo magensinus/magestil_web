@@ -9,7 +9,7 @@ html,
 body {
   @include border-box;
   @include clearfix;
-  background-color: #00008B;
+  background-color: $white;
   font-family: $sans;
   font-size: 18px;
   line-height: 1;
@@ -19,14 +19,14 @@ body {
 }
 
 a {
-  color: blue;
+  color: $black;
   &:link,
   &:visited {
-    color: blue;
+    color: $black;
   }
   &:hover,
   &:active {
-    color: green;
+    color: $gray;
   }
 }
 
