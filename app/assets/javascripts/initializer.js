@@ -1,10 +1,11 @@
 // Initializer
 
 bindEvents = function() {
+  $(".off").altaiOff();
   // $(".panel").setPanel({ trim: 176 });
-  $(".menu-dropdown").altaiToggle({
-    effect: "fade",
-    klass: ".menu-dropdown-trigger"
+  $(".menu-responsive").altaiToggle({
+    effect: "slide",
+    klass: ".menu-responsive-trigger"
   });
   $("a.gallery").featherlightGallery({
     previousIcon: "«",

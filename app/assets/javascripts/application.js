@@ -16,5 +16,6 @@
 //= require featherlight/src/featherlight
 //= require featherlight/src/featherlight.gallery
 //= require plugins/set_panel
+//= require altai_off/dist/altai_off
 //= require altai_toggle/dist/altai_toggle
 //= require initializer

@@ -5,3 +5,23 @@
   height: 320px;
   width: 100%;
 }
+
+// Media Queries
+
+@media #{$tiny} {
+  #map {
+    @include hide-block-element;
+  }
+}
+
+@media #{$small} {
+  #map {
+    @include hide-block-element;
+  }
+}
+
+@media #{$medium} {
+}
+
+@media #{$large} {
+}
