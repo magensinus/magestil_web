@@ -3,7 +3,7 @@
 module ApplicationHelper
   # Fetch badges
   def fetch_badges
-    @fetch_badges = Endorsement::Badge.where(magestil: true)
+    @fetch_badges = Endorsement::Badge.where(published: true, magestil: true)
   end
 
   # Fetch categories
@@ -13,6 +13,6 @@ module ApplicationHelper
 
   # Fetch networks
   def fetch_networks
-    @fetch_networks = Network.where(published: true, magestil: true)
+    @fetch_networks = Network.all
   end
 end

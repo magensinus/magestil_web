@@ -10,6 +10,10 @@ $class: "copyright";
     .#{$class}-item {
       float: left;
       padding: 4px;
+      p {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }
