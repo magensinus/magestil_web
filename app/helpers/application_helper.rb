@@ -13,6 +13,6 @@ module ApplicationHelper
 
   # Fetch networks
   def fetch_networks
-    @fetch_networks = Network.all
+    @fetch_networks = Network.where(published: true, magestil: true)
   end
 end
