@@ -13,9 +13,9 @@ class NewsletterController < ApplicationController
     @subscription = Subscription.new(subscription_params)
 
     if @subscription.save
-      flash[:success] = @newsletter.success
+      flash[:success] = @settings.newsletter_success
     else
-      flash[:failure] = @newsletter.failure
+      flash[:failure] = @settings.newsletter_failure
     end
     redirect_to newsletter_index_path
   end

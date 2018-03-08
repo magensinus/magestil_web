@@ -1,0 +1,28 @@
+// V-card
+
+.main.left.col-960-2-1
+  .main-box.col-960-2-1
+    .main-item.col-960-2-1
+      - if object.address_one.presence
+        %p.small= object.address_one
+      - if object.address_two.presence
+        %p.small= object.address_two
+      - if object.postcode.presence && object.city.presence
+        %p.small
+          = object.postcode
+          = object.city
+      - if object.country.presence
+        %p.small= object.country
+    .main-item.col-960-2-1
+      - if object.phone.presence
+        %p.small
+          #{t("contact.phone")}:
+          = object.phone
+      - if object.fax.presence
+        %p.small
+          #{t("contact.fax")}:
+          = object.fax
+      - if object.email.presence
+        %p.small
+          #{t("contact.email")}:
+          = object.email

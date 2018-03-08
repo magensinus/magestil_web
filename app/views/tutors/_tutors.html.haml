@@ -1,13 +1,28 @@
 // Tutors
 
-.main.col-960-1-1.left
-  .main-box.col-960-1-1
-    .main-item.col-960-1-1
-      %h1= parent.title
-%hr.separator.medium
-.main.col-720-1-1
-  .main-box.col-720-1-1
-    - objects.each do |object|
-      - if object.tutor.name.presence
-        .main-item.col-720-1-1
-          %h3= object.tutor.name
+- if params[:course_id]
+  .main.col-960-1-1.left
+    .main-box.col-960-1-1
+      .main-item.col-960-1-1
+        %h1= parent.title
+  %hr.separator.medium
+  .main.col-720-1-1
+    .main-box.col-720-1-1
+      - objects.each do |object|
+        - if object.tutor.name.presence
+          .main-item.col-720-1-1
+            %h3= object.tutor.name
+- else
+  .main.col-960-1-1
+    .main-box.col-960-1-1
+      - if object.title.presence
+        .main-item.col-960-1-1
+          %h1= object.title
+      - if object.description.presence
+        .main-item.col-960-1-1
+          .trix.medium
+            = safe_join([object.description.html_safe])
+      - if object.body.presence
+        .main-item.col-960-1-1
+          .trix
+            = safe_join([object.body.html_safe])

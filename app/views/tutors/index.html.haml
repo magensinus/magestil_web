@@ -1,8 +1,8 @@
 // Index
 
-- if params[:course_id]
-  = render "breadcrumbs"
+= render "breadcrumbs"
 
-  .panel-one
-    = render "tutors", parent: @academy_course, objects: @academy_course_tutors
+.panel-one
+  = render "tutors", object: @tutors, parent: @academy_course, objects: @academy_course_tutors
+  - if params[:course_id]
     = render "lib/components/courses/menu_aside", parent: @academy_course, objects: @academy_course_sections

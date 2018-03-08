@@ -1,0 +1,11 @@
+// Contact
+
+.main.left.col-960-2-1
+  .main-box.col-960-2-1
+    - if object.title.presence
+      .main-item.col-960-2-1
+        %h1= object.title
+    - if object.description.presence
+      .main-item.col-960-2-1
+        .trix.medium
+          = safe_join([object.description.html_safe])

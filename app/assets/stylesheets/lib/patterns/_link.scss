@@ -34,15 +34,15 @@
     line-height: 40px;
   }
   &:link, &:visited {
-    color: $black;
+    color: blue;
     .icon * {
-      fill: $black;
+      fill: blue;
     }
   }
   &:hover, &:active {
-    color: $gray;
+    color: green;
     .icon * {
-      fill: $gray;
+      fill: green;
     }
   }
   &.blue {
@@ -78,15 +78,15 @@
 .active {
   .link {
     &:link, &:visited {
-      color: $gray;
+      color: green;
       .icon * {
-        fill: $gray;
+        fill: green;
       }
     }
     &:hover, &:active {
-      color: $gray;
+      color: green;
       .icon * {
-        fill: $gray;
+        fill: green;
       }
     }
   }

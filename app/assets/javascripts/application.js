@@ -13,6 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery/dist/jquery
+//= require featherlight/src/featherlight
+//= require featherlight/src/featherlight.gallery
 //= require plugins/set_panel
 //= require altai_toggle/dist/altai_toggle
 //= require initializer

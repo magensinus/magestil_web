@@ -1,12 +1,12 @@
 // Courses theme
 
-- if object.cover_box_magestil.presence
+- if object.image_box_magestil.presence
   :coffee
     bindWidths = ->
       $windowSize = $(this).width()
       $(".set-theme-#{object.slug}").css
         "background-color": "#{object.gradient_color_one}"
-        "background-image": "url(" + "#{object.cover_box_magestil_url}" + ")"
+        "background-image": "url('#{object.image_box_magestil_url}')"
       return
     $(document).on "turbolinks:load", ->
       bindWidths()

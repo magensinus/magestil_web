@@ -6,6 +6,12 @@ bindEvents = function() {
     effect: "fade",
     klass: ".menu-dropdown-trigger"
   });
+  $("a.gallery").featherlightGallery({
+    previousIcon: "«",
+    nextIcon: "»",
+    galleryFadeIn: 300,
+    openSpeed: 300
+  });
 };
 
 $(document).on( "turbolinks:load", function() {

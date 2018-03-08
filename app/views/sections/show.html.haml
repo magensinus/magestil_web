@@ -2,7 +2,7 @@
 
 - content_for :theme_class do
   = "set-theme-#{@academy_course_section.slug}"
-= render "breadcrumbs"
+= render "breadcrumbs",                       parent: @academy_course
 = render "section",                           parent: @academy_course, object: @academy_course_section
 = render "lib/components/courses/menu_aside", parent: @academy_course, objects: @academy_course_sections
 = render "section_theme",                     parent: @academy_course, object: @academy_course_section

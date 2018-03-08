@@ -1,7 +1,8 @@
 // Breadcrumbs
 
-- content_for :breadcrumbs do
-  .breadcrumbs
-    %ul.breadcrumbs-box
-      %li.breadcrumbs-item
-        = link_to "Voltar", course_path(@academy_course), class: "link mono tiny"
+- if params[:course_id]
+  - content_for :breadcrumbs do
+    .breadcrumbs
+      %ul.breadcrumbs-box
+        %li.breadcrumbs-item
+          = link_to "Voltar", course_path(@academy_course), class: "link mono tiny"

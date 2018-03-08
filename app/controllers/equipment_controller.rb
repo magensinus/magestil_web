@@ -6,5 +6,6 @@ class EquipmentController < ApplicationController
   # /equipment
   def index
     @equipment ||= Equipment.first!
+    @equipment_assets ||= EquipmentAsset.all
   end
 end

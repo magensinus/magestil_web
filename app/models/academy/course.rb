@@ -16,6 +16,9 @@ module Academy
     # Cover
     mount_uploader :cover_box, Academy::CoverUploader
     mount_uploader :cover_box_magestil, Academy::CoverUploader
+    # Image
+    mount_uploader :image_box, Academy::ImageUploader
+    mount_uploader :image_box_magestil, Academy::ImageUploader
     # Document
     mount_uploader :document_box, Academy::DocumentUploader
     mount_uploader :document_box_magestil, Academy::DocumentUploader

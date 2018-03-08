@@ -1,0 +1,7 @@
+// Campus
+
+.main.col-960-1-1
+  .main-box.col-960-1-1
+    - @campus_assets.each do |asset|
+      .main-item.col-960-4-1
+        = link_to image_tag(asset.image_box_url(:thumb)), "#{asset.image_box_url}", "data-featherlight" => "image", class: "gallery"
