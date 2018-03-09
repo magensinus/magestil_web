@@ -10,11 +10,13 @@ Rails.application.routes.draw do
   resources :students,      only: [:index],          controller: :students
   resources :parents,       only: [:index],          controller: :parents
   resources :tutors,        only: [:index],          controller: :tutors
+  resources :categories,    only: [:index, :show],   controller: :categories do
+    resources :enrollments,                          controller: :enrollments
+  end
   resources :courses,       only: [:show],           controller: :courses do
     resources :tutors,      only: [:index, :show],   controller: :tutors
     resources :sections,    only: [:index, :show],   controller: :sections
   end
-  resources :categories,    only: [:index],          controller: :categories, path: :courses
   resources :articles,      only: [:index, :show],   controller: :articles
   resources :contact,       only: [:index],          controller: :contact
   resources :newsletter,    only: [:index, :create], controller: :newsletter

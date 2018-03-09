@@ -11,3 +11,5 @@
     - if parent.document_box.presence
       .menu-aside-item.col-240-1-1
         = link_to "Descarregar PDF", parent.document_box.url.to_s, class: "link small wide left", target: "_blank", style: "color: #{parent.font_color_one}"
+    .menu-aside-item.col-240-1-1
+      = link_to "Pré-inscrições", category_enrollments_path(grandparent), class: "link small wide left", style: "color: #{parent.font_color_one}"

@@ -4,6 +4,7 @@ class SectionsController < ApplicationController
   # /courses/tyyt56hhhj/sections
   def index
     @academy_course = Academy::Course.find_by(slug: params[:course_id])
+    @academy_category = @academy_course.category
     @academy_course_sections = @academy_course.sections.all
     if @academy_course_sections.presence
       @academy_course_section = @academy_course.sections.first!
@@ -16,6 +17,7 @@ class SectionsController < ApplicationController
   # /courses/tyyt56hhhj/sections
   def show
     @academy_course = Academy::Course.find_by(slug: params[:course_id])
+    @academy_category = @academy_course.category
     @academy_course_section = @academy_course.sections.find_by(slug: params[:id])
     @academy_course_sections = @academy_course.sections.all
   end

@@ -35,5 +35,9 @@ module Academy
     has_many :course_tutors, dependent: :destroy, foreign_key: "academy_course_id", inverse_of: false
     # Academy tutors
     has_many :tutors, through: :course_tutors
+    # Academy enrollment courses
+    has_many :enrollment_courses, dependent: :destroy, foreign_key: "academy_course_id", inverse_of: false
+    # Academy enrollments
+    has_many :enrollments, through: :enrollment_courses
   end
 end

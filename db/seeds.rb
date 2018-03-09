@@ -6,11 +6,11 @@ Magestil::Settings.create(
   title: "",
   description: "",
   url: "",
-  enrollment_success: "<div>Nullam id dolor id nibh ultricies vehicula ut id elit.</div>",
-  enrollment_failure: "<div>Donec sed odio dui.</div>",
-  enrollment_description: "<div>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>",
-  newsletter_success: "<div>Cras mattis consectetur purus sit amet fermentum.</div>",
-  newsletter_failure: "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>"
+  enrollment_success: "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  enrollment_failure: "Vestibulum id ligula porta felis euismod semper.",
+  enrollment_description: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+  newsletter_success: "Cras mattis consectetur purus sit amet fermentum.",
+  newsletter_failure: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 )
 
 # Create Magestil Home

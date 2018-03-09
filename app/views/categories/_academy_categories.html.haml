@@ -1,9 +1,17 @@
 // Categories
 
-.academy-categories.col-960-1-1
-  - if objects.presence
+- if params[:action] == "index"
+  .academy-categories.col-960-1-1
+    - if objects.presence
+      .academy-categories-box.col-960-1-1
+        - objects.each do |object|
+          %h3= object.slug
+          - object.courses.each do |item|
+            .academy-categories-item{ style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
+              = link_to "Bibendum Vestibulum Sollicitudin Cras Etiam", course_path(item), class: "link medium"
+- else
+  .academy-categories.col-960-1-1
     .academy-categories-box.col-960-1-1
       - objects.each do |object|
-        - object.courses.each do |item|
-          .academy-categories-item{ style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
-            = link_to "Bibendum Vestibulum Sollicitudin Cras Etiam", course_path(item), class: "link medium"
+        .academy-categories-item{ style: "background-image: url('#{object.thumb_box_magestil_url}'); background-image: image-url('#{object.thumb_box_magestil_url}')" }
+          = link_to object.title, course_path(object), class: "link medium"
