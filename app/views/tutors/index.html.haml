@@ -4,5 +4,8 @@
 
 .panel-one
   = render "tutors", object: @tutors, parent: @academy_course, objects: @academy_course_tutors
+  %hr.separator.medium
+  = render "documents"
+
   - if params[:course_id]
     = render "lib/components/courses/menu_aside", parent: @academy_course, objects: @academy_course_sections
