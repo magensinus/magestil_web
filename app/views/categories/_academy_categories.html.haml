@@ -8,12 +8,13 @@
           .main-item.col-960-1-1
             %h3= object.title
           .main-item.col-960-1-1
-            = safe_join([object.description.html_safe])
+            .trix.small
+              = safe_join([object.description.html_safe])
           .academy-categories.col-960-1-1
             .academy-categories-box.col-960-1-1
               - object.courses.each do |item|
                 .academy-categories-item{ style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
-                  = link_to "Bibendum Vestibulum Sollicitudin Cras Etiam", course_path(item), class: "link medium"
+                  = link_to item.title, course_path(item), class: "link medium white-green"
           %hr.separator.medium
 - else
   .academy-categories.col-960-1-1

@@ -16,9 +16,11 @@ $class: "academy-categories";
       width: 472px;
       .link {
         display: table-cell;
+        font-weight: bold;
         padding: 16px;
         vertical-align: middle;
         text-align: center;
+        text-decoration: none;
         width: 100%;
       }
       img {

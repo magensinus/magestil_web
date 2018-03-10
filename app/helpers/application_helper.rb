@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  # Fetch settings
+  def fetch_settings
+    @fetch_settings = Settings.first
+  end
+
   # Fetch badges
   def fetch_badges
     @fetch_badges = Endorsement::Badge.where(published: true, magestil: true)
@@ -8,7 +13,7 @@ module ApplicationHelper
 
   # Fetch categories
   def fetch_categories
-    @fetch_categories ||= Academy::Category.where(published: true, magestil: true)
+    @fetch_categories = Academy::Category.where(published: true, magestil: true)
   end
 
   # Fetch networks

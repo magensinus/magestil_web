@@ -104,4 +104,25 @@
       }
     }
   }
+  &.white-green {
+    background-color: $white;
+    color: $green;
+    .icon * {
+      fill: $green;
+    }
+    &:link, &:visited {
+      background-color: $white;
+      color: $green;
+      .icon * {
+        fill: $green;
+      }
+    }
+    &:hover, &:active {
+      background-color: $green-lightest;
+      color: $green;
+      .icon * {
+        fill: $green;
+      }
+    }
+  }
 }

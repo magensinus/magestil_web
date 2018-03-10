@@ -9,7 +9,8 @@ html,
 body {
   @include border-box;
   @include clearfix;
-  background-color: $white;
+  color: $blue-darkest;
+  background-color: $blue;
   font-family: $sans;
   font-size: 18px;
   line-height: 1;

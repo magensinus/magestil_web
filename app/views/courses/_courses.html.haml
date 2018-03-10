@@ -7,6 +7,8 @@
         %h1.large{ style: "color: #{object.font_color_one}" }= object.title
     .billboard-item.middle
       - if object.description.presence
-        %p.small{ style: "color: #{object.font_color_one}" }= object.description
+        .trix.small
+          // %p.small{ style: "color: #{object.font_color_one}" }= object.description
+          = safe_join([object.description.html_safe])
     .billboard-item.bottom
-      = link_to t("read_more"), course_sections_path(object), class: "button tiny left", style: "color: #{object.font_color_one} !important; background-color: #{object.font_color_two} !important;"
+      = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left", style: "color: #{object.font_color_one} !important; background-color: #{object.font_color_two} !important;"

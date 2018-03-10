@@ -2,4 +2,5 @@
 
 .panel-one
   = render "newsletter", object: @newsletter
-  = render "form", object: @subscription
+  - unless flash[:success]
+    = render "form", object: @subscription

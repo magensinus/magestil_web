@@ -8,9 +8,9 @@
     - if object.description.presence
       .main-item.col-960-1-1
         - if flash[:success]
-          %p.medium= flash[:success]
+          %p.medium.green-ft= flash[:success]
         - elsif flash[:failure]
-          %p.medium= flash[:failure]
+          %p.medium.red-ft= flash[:failure]
         - else
           .trix.medium
             = safe_join([object.description.html_safe])

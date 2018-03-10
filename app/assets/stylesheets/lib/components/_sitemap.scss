@@ -15,18 +15,32 @@ $class: "sitemap";
       padding: 2px;
       width: 236px;
       .link {
-        background-color: $black;
+        background-color: $blue-darker;
         color: $white;
         padding: 4px 8px;
         text-decoration: none;
         width: 100%;
         &:link, &:visited {
-          background-color: $black;
+          background-color: $blue-darker;
           color: $white;
         }
         &:hover, &:active {
-          background-color: $white;
-          color: $black;
+          background-color: $blue-darkest;
+          color: $white;
+        }
+      }
+      &.active {
+        .link {
+          background-color: $blue-darkest;
+          color: $white;
+          &:link, &:visited {
+            background-color: $blue-darkest;
+            color: $white;
+          }
+          &:hover, &:active {
+            background-color: $blue-darkest;
+            color: $white;
+          }
         }
       }
     }

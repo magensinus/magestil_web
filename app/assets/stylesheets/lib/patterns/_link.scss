@@ -12,6 +12,11 @@
   &.no-underline {
     text-decoration: none;
   }
+  &.icon {
+    img {
+      float: left;
+    }
+  }
   &.nano {
     font-size: 12px;
     line-height: 18px;
@@ -73,6 +78,20 @@
       }
     }
   }
+  &.white-green {
+    &:link, &:visited {
+      color: $white;
+      .icon * {
+        fill: $white;
+      }
+    }
+    &:hover, &:active {
+      color: $green;
+      .icon * {
+        fill: $green;
+      }
+    }
+  }
 }
 
 .active {
@@ -87,6 +106,20 @@
       color: $gray;
       .icon * {
         color: $gray;
+      }
+    }
+    &.white-green {
+      &:link, &:visited {
+        color: $green;
+        .icon * {
+          fill: $green;
+        }
+      }
+      &:hover, &:active {
+        color: $green;
+        .icon * {
+          fill: $green;
+        }
       }
     }
   }
