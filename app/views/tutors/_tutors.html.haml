@@ -1,17 +1,25 @@
 // Tutors
 
 - if params[:course_id]
-  .main.col-960-1-1.left
+  .main.col-960-1-1
     .main-box.col-960-1-1
       .main-item.col-960-1-1
-        %h1= parent.title
+        %h1.large.left{ style: "color: #{parent.font_color_one}" }
+          = parent.title
+
   %hr.separator.medium
+
   .main.col-720-1-1
     .main-box.col-720-1-1
       - objects.each do |object|
         - if object.tutor.name.presence
           .main-item.col-720-1-1
             %h3= object.tutor.name
+        - if object.tutor.biography.presence
+          .main-item.col-720-1-1
+            .trix.small
+              = safe_join([object.tutor.biography.html_safe])
+
 - else
   .main.col-960-1-1
     .main-box.col-960-1-1

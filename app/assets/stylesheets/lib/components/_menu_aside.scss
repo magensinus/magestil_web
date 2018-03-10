@@ -8,12 +8,22 @@ $class: "menu-aside";
   .#{$class}-box {
     @include clear-list;
     float: left;
-    padding: 4px;
+    padding: 8px;
     width: 100%;
+    .#{$class}-wrapper {
+      background-color: $white;
+      float: left;
+      padding: 8px;
+      width: 100%;
+    }
     .#{$class}-item {
       float: left;
       padding: 4px;
       width: 100%;
+      .link {
+        float: left;
+        width: 100%;
+      }
     }
   }
 }
