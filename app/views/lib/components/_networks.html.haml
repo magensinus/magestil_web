@@ -5,4 +5,4 @@
     %ul.networks-box
       - fetch_networks.each do |object|
         %li.networks-item
-          = link_to image_tag(object.thumb_box_url.to_s, class: "left"), object.url, class: "link left"
+          = link_to image_tag(object.thumb_box_url.to_s, class: "left"), object.url, class: "link left", target: "_blank"
