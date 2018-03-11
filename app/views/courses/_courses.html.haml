@@ -4,11 +4,12 @@
   .billboard-box
     .billboard-item.top
       - if object.title.presence
-        %h1.large{ style: "color: #{object.font_color_one}" }= object.title
+        %h1.large= object.title
+        // %h1.large{ style: "color: #{object.font_color_one}" }= object.title
     .billboard-item.middle
       - if object.description.presence
         .trix.small
           // %p.small{ style: "color: #{object.font_color_one}" }= object.description
           = safe_join([object.description.html_safe])
     .billboard-item.bottom
-      = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left", style: "color: #{object.font_color_one} !important; background-color: #{object.font_color_two} !important;"
+      = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left", style: "color: #{object.font_color_one} !important; background-color: #{object.background_color_one} !important;"

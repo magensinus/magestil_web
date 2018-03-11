@@ -5,7 +5,7 @@
     bindWidths = ->
       $windowSize = $(this).width()
       $(".set-theme-#{object.slug}").css
-        "background-color": "#{object.gradient_color_one}"
+        "background-color": "#{object.gradient_color_fallback}"
         "background-image": "url('#{object.image_box_magestil_url}')"
       return
     $(document).on "turbolinks:load", ->
@@ -21,7 +21,7 @@
     bindWidths = ->
       $windowSize = $(this).width()
       $(".set-theme-#{object.slug}").css
-        "background-color": "#{object.gradient_color_one}"
+        "background-color": "#{object.gradient_color_fallback}"
         "background-image": "linear-gradient(#{object.gradient_color_one}, #{object.gradient_color_two})"
       return
     $(document).on "turbolinks:load", ->
