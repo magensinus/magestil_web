@@ -3,7 +3,8 @@
 .main.col-960-1-1
   .main-box.col-960-1-1
     .main-item.col-960-1-1
-      %h1.large.left{ style: "color: #{parent.font_color_one}" }
+      %h1.large.left= parent.title
+      // %h1.large.left{ style: "color: #{parent.font_color_one}" }
         = parent.title
 
 %hr.separator.medium
@@ -11,12 +12,14 @@
 .main.col-720-1-1
   .main-box.col-720-1-1
     .main-item.col-720-1-1
-      %h3{ style: "color: #{parent.font_color_one}" }= object.title
+      %h3.left= object.title
+      // %h3{ style: "color: #{parent.font_color_one}" }= object.title
     - object.section_assets.order(position: :asc).each do |asset|
       .main-item.col-720-1-1
         - if asset.text     == true
           .trix
-            .text{ style: "color: #{parent.font_color_one}" }
+            .text
+            // .text{ style: "color: #{parent.font_color_one}" }
               = safe_join([asset.text_box.html_safe])
         - if asset.image    == true
           .trix
