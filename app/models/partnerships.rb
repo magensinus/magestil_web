@@ -5,5 +5,12 @@ class Partnerships < ApplicationRecord
   self.table_name = "magestil_partnerships"
 
   # Concerns
+  # --------
+  # Slug
   include Slug
+
+  # Uploaders
+  # ---------
+  # Image
+  mount_uploader :image_box, Magestil::ImageUploader
 end

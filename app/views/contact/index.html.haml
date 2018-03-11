@@ -1,5 +1,8 @@
 // Index
 
+- content_for :theme_class do
+  = "set-theme-#{@contact.slug}"
 = render "contact", object: @contact
 = render "map", object: @contact
 = render "v_card", object: @contact
+= render "lib/components/themes/basic_theme", object: @contact

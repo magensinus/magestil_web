@@ -1,6 +1,7 @@
 // Index
 
-.panel-one
-  = render "newsletter", object: @newsletter
-  - unless flash[:success]
-    = render "form", object: @subscription
+- content_for :theme_class do
+  = "set-theme-#{@newsletter.slug}"
+= render "newsletter", object: @newsletter
+- unless flash[:success]
+  = render "form", object: @subscription

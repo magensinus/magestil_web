@@ -1,4 +1,6 @@
 // Index
 
-.panel-one
-  = render "articles", objects: @journal_articles
+- content_for :theme_class do
+  = "set-theme-#{@articles.slug}"
+= render "articles", objects: @journal_articles
+= render "lib/components/themes/basic_theme", object: @articles

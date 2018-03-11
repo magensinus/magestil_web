@@ -5,5 +5,7 @@ class Settings < ApplicationRecord
   self.table_name = "magestil_settings"
 
   # Concerns
+  # --------
+  # Slug
   include Slug
 end

@@ -1,4 +1,7 @@
 // Index
 
+- content_for :theme_class do
+  = "set-theme-#{@courses.slug}"
 = render "courses", object: @courses
 = render "academy_categories", objects: @academy_categories
+= render "lib/components/themes/basic_theme", object: @courses

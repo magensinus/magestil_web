@@ -1,5 +1,6 @@
 // Index
 
-.panel-one
-  = render "equipment", object: @equipment
-  = render "equipment_assets"
+- content_for :theme_class do
+  = "set-theme-#{@equipment.slug}"
+= render "equipment", object: @equipment
+= render "equipment_assets"

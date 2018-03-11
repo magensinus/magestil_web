@@ -31,6 +31,7 @@ module Academy
     validates :dob, presence: true
     # Email
     validates :email, presence: true
+    validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
     # Phone
     validates :phone, presence: true
     # Courses

@@ -1,4 +1,6 @@
 // Index
 
-.panel-one
-  = render "about", object: @about
+- content_for :theme_class do
+  = "set-theme-#{@about.slug}"
+= render "about", object: @about
+= render "lib/components/themes/basic_theme", object: @about

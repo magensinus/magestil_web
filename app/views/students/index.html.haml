@@ -1,5 +1,7 @@
 // Index
 
+- content_for :theme_class do
+  = "set-theme-#{@students.slug}"
 = render "students", object: @students
 %hr.separator.medium
 = render "documents"

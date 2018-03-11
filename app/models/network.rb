@@ -5,6 +5,8 @@ class Network < ApplicationRecord
   self.table_name = "magestil_networks"
 
   # Concerns
+  # --------
+  # Slug
   include Slug
 
   # Uploaders

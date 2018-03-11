@@ -1,0 +1,19 @@
+// Basic theme
+
+- if object.image_box.presence
+  :coffee
+    bindWidths = ->
+      $windowSize = $(this).width()
+      $(".set-theme-#{object.slug}").css
+        "background-image": "url('#{object.image_box_url}')"
+        "background-size": "cover"
+        "background-position": "center"
+      return
+    $(document).on "turbolinks:load", ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return
+    $(window).resize ->
+      bindWidths()
+      Turbolinks.clearCache()
+      return

@@ -1,5 +1,7 @@
 // Index
 
-.panel-one
-  = render "campus", object: @campus
-  = render "campus_assets"
+- content_for :theme_class do
+  = "set-theme-#{@campus.slug}"
+= render "campus", object: @campus
+= render "campus_assets"
+= render "lib/components/themes/basic_theme", object: @campus

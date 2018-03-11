@@ -5,5 +5,12 @@ class Contact < ApplicationRecord
   self.table_name = "magestil_contact"
 
   # Concerns
+  # --------
+  # Slug
   include Slug
+
+  # Uploaders
+  # ---------
+  # Image
+  mount_uploader :image_box, Magestil::ImageUploader
 end
