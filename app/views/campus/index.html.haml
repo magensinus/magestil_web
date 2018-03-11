@@ -3,5 +3,6 @@
 - content_for :theme_class do
   = "set-theme-#{@campus.slug}"
 = render "campus", object: @campus
+%hr.separator.medium
 = render "campus_assets"
 = render "lib/components/themes/basic_theme", object: @campus

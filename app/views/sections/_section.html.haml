@@ -4,8 +4,7 @@
   .main-box.col-960-1-1
     .main-item.col-960-1-1
       %h1.large.left= parent.title
-      // %h1.large.left{ style: "color: #{parent.font_color_one}" }
-        = parent.title
+      // %h1.large.left{ style: "color: #{parent.font_color_one}" }= parent.title
 
 %hr.separator.medium
 
@@ -19,7 +18,7 @@
         - if asset.text     == true
           .trix
             .text
-            // .text{ style: "color: #{parent.font_color_one}" }
+              // .text{ style: "color: #{parent.font_color_one}" }
               = safe_join([asset.text_box.html_safe])
         - if asset.image    == true
           .trix
