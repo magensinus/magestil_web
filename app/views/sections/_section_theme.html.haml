@@ -8,9 +8,9 @@
       "background-color": "#{parent.background_color_two}"
 
     # Breadcrumbs Links
-    $(".breadcrumbs .link").css
+    $(".set-theme-#{object.slug} .breadcrumbs .link").css
       "color": "white"
-    $(".breadcrumbs .link").hover(->
+    $(".set-theme-#{object.slug} .breadcrumbs .link").hover(->
       $(this).css
         "color": "#{parent.hover_color_two}"
     ).mouseout ->

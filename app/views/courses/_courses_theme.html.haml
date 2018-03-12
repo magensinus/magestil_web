@@ -9,9 +9,9 @@
         "background-image": "url('#{object.cover_box_magestil_url}')"
 
       # Breadcrumbs Links
-      $(".breadcrumbs .link").css
+      $(".set-theme-#{object.slug} .breadcrumbs .link").css
         "color": "white"
-      $(".breadcrumbs .link").hover(->
+      $(".set-theme-#{object.slug} .breadcrumbs .link").hover(->
         $(this).css
           "color": "#{object.hover_color_two}"
       ).mouseout ->
@@ -19,10 +19,10 @@
           "color": "white"
 
       # Billboard Button
-      $(".billboard .button").css
+      $(".set-theme-#{object.slug} .billboard .button").css
         "color": "white",
         "background-color": "#{object.hover_color_one}"
-      $(".billboard .button").hover(->
+      $(".set-theme-#{object.slug} .billboard .button").hover(->
         $(this).css
           "color": "#{object.font_color_one}",
           "background-color": "#{object.hover_color_two}"
@@ -46,7 +46,30 @@
       $(".set-theme-#{object.slug}").css
         "background-color": "#{object.gradient_color_fallback}"
         "background-image": "linear-gradient(#{object.gradient_color_one}, #{object.gradient_color_two})"
-      return
+
+      # Breadcrumbs Links
+      $(".set-theme-#{object.slug} .breadcrumbs .link").css
+        "color": "white"
+      $(".set-theme-#{object.slug} .breadcrumbs .link").hover(->
+        $(this).css
+          "color": "#{object.hover_color_two}"
+      ).mouseout ->
+        $(this).css
+          "color": "white"
+
+      # Billboard Button
+      $(".set-theme-#{object.slug} .billboard .button").css
+        "color": "white",
+        "background-color": "#{object.hover_color_one}"
+      $(".set-theme-#{object.slug} .billboard .button").hover(->
+        $(this).css
+          "color": "#{object.font_color_one}",
+          "background-color": "#{object.hover_color_two}"
+      ).mouseout ->
+        $(this).css
+          "color": "white",
+          "background-color": "#{object.hover_color_one}"
+
     $(document).on "turbolinks:load", ->
       bindWidths()
       Turbolinks.clearCache()

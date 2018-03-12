@@ -4,9 +4,9 @@
   bindWidths = ->
     $windowSize = $(this).width()
     # Billboard Button
-    $(".academy-categories .link").css
+    $(".academy-categories .set-item-#{object.slug} .link").css
       "color": "white"
-    $(".academy-categories .link").hover(->
+    $(".academy-categories .set-item-#{object.slug} .link").hover(->
       $(this).css
         "color": "#{object.font_color_one}"
     ).mouseout ->

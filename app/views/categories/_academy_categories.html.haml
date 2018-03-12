@@ -13,7 +13,7 @@
           .academy-categories.col-960-1-1
             .academy-categories-box.col-960-1-1
               - object.courses.each do |item|
-                .academy-categories-item{ style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
+                .academy-categories-item{ class: "set-item-#{item.slug}", style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
                   = link_to item.title, course_path(item), class: "link medium white-green"
                 = render "courses_theme", object: item
           %hr.separator.medium
