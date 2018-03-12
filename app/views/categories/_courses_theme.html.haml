@@ -1,0 +1,23 @@
+// Courses theme
+
+:coffee
+  bindWidths = ->
+    $windowSize = $(this).width()
+    # Billboard Button
+    $(".academy-categories .link").css
+      "color": "white"
+    $(".academy-categories .link").hover(->
+      $(this).css
+        "color": "#{object.font_color_one}"
+    ).mouseout ->
+      $(this).css
+        "color": "white"
+
+  $(document).on "turbolinks:load", ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return
+  $(window).resize ->
+    bindWidths()
+    Turbolinks.clearCache()
+    return

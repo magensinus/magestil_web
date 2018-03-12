@@ -2,6 +2,8 @@
 
 - content_for :theme_class do
   = "set-theme-#{@academy_course.slug}"
+- content_for :theme_aside_class do
+  = "set-theme-aside-#{@academy_course.slug}"
 = render "breadcrumbs",   object: @academy_course
 = render "courses",       object: @academy_course
 = render "courses_theme", object: @academy_course

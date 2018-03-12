@@ -1,13 +1,36 @@
 // Courses theme
 
-- if object.image_box_magestil.presence
+- if object.cover_box_magestil.presence
   :coffee
     bindWidths = ->
       $windowSize = $(this).width()
       $(".set-theme-#{object.slug}").css
         "background-color": "#{object.gradient_color_fallback}"
-        "background-image": "url('#{object.image_box_magestil_url}')"
-      return
+        "background-image": "url('#{object.cover_box_magestil_url}')"
+
+      # Breadcrumbs Links
+      $(".breadcrumbs .link").css
+        "color": "white"
+      $(".breadcrumbs .link").hover(->
+        $(this).css
+          "color": "#{object.hover_color_two}"
+      ).mouseout ->
+        $(this).css
+          "color": "white"
+
+      # Billboard Button
+      $(".billboard .button").css
+        "color": "white",
+        "background-color": "#{object.hover_color_one}"
+      $(".billboard .button").hover(->
+        $(this).css
+          "color": "#{object.font_color_one}",
+          "background-color": "#{object.hover_color_two}"
+      ).mouseout ->
+        $(this).css
+          "color": "white",
+          "background-color": "#{object.hover_color_one}"
+
     $(document).on "turbolinks:load", ->
       bindWidths()
       Turbolinks.clearCache()
