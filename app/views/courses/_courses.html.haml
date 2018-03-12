@@ -11,7 +11,8 @@
         .trix.small
           // %p.small{ style: "color: #{object.font_color_one}" }= object.description
           // = safe_join([object.description.html_safe])
-          = truncate(object.description.html_safe, length: 240, escape: false)
+          = truncate(object.description, length: 240, escape: false)
+          </div>
     .billboard-item.bottom
       = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left"
     -#
