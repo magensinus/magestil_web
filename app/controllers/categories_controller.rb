@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # /categories
   def index
     @courses ||= Courses.first!
-    @academy_categories ||= Academy::Category.where(magestil: true, published: true).includes(:courses).order(position: :asc)
+    @academy_categories ||= Academy::Category.where(magestil: true, published: true).order(position: :asc)
   end
 
   # /categories
