@@ -4,6 +4,6 @@ class ParentsController < ApplicationController
   # Root
   def index
     @parents = Parents.first!
-    @documents = Wallet::Category.where(magestil: true).where(wallet_type: "parents")
+    @documents = Wallet::Category.where(magestil: true).where(wallet_type: "parents").order(position: :asc)
   end
 end
