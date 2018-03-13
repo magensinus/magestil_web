@@ -26,3 +26,7 @@
         %p.small
           #{t("contact.email")}:
           = object.email
+    - if object.body.presence
+      .main-item.col-960-2-1
+        .trix.small
+          = safe_join([object.body.html_safe])
