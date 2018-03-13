@@ -80,4 +80,11 @@
       line-height: 36px;
     }
   }
+  &.dark {
+    color: $blue-darkest;
+    p,
+    div {
+      color: $blue-light;
+    }
+  }
 }
