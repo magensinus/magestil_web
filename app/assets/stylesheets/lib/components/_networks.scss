@@ -7,10 +7,9 @@ $class: "networks";
   .#{$class}-box {
     @include clear-list;
     float: left;
-    padding: 4px;
     .#{$class}-item {
       float: left;
-      padding: 4px;
+      padding: 8px;
       .link {
         float: left;
         img {
