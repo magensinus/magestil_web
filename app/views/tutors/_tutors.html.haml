@@ -13,7 +13,9 @@
       - objects.each do |object|
         - if object.tutor.name.presence
           .main-item.col-720-1-1
-            %h3= object.tutor.name
+            %h3
+              = object.tutor.name
+              = object.tutor.surname
         - if object.tutor.biography.presence
           .main-item.col-720-1-1
             .trix.small
