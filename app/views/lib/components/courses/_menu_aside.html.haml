@@ -11,7 +11,7 @@
           = link_to "Componentes de Formação", "#{parent.image_box_magestil_url}", "data-featherlight" => "image", class: "link small gallery"
       - if parent.tutors.presence
         .menu-aside-item.col-240-1-1
-          = link_to "Tutores", course_tutors_path(parent), class: "link small"
+          = link_to "Coordenadores & Professores", course_tutors_path(parent), class: "link small"
       - if parent.document_box_magestil.presence
         .menu-aside-item.col-240-1-1
           = link_to "Descarregar PDF", parent.document_box_magestil.url.to_s, class: "link small", target: "_blank"
