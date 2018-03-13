@@ -108,14 +108,12 @@ blockquote {
 
 ol,
 ul {
-  margin: 28px 0;
-  padding: 0 32px;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  list-style-position: outside;
   li {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 4px 0;
+    line-height: 1;
+    margin: 0;
     padding: 0;
   }
 }

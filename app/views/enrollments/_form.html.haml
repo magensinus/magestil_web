@@ -7,7 +7,7 @@
       %p= settings.enrollment_description
     .wrapper
       = f.collection_check_boxes :course_ids, courses, :id, :title, include_hidden: false do |tag|
-        .main-item.col-960-2-1
+        .main-item.col-960-2-1.w-col
           .checkbox.underline.left
             = tag.check_box(class: "left")
             = tag.label(class: "left")
