@@ -8,7 +8,7 @@
         // %h1.large{ style: "color: #{object.font_color_one}" }= object.title
     .billboard-item.middle
       - if object.description.presence
-        .trix.small
+        .trix
           // %p.small{ style: "color: #{object.font_color_one}" }= object.description
           // = safe_join([object.description.html_safe])
           = truncate(object.description, length: 240, escape: false)

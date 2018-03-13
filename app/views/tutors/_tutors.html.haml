@@ -18,9 +18,8 @@
               = object.tutor.surname
         - if object.tutor.biography.presence
           .main-item.col-720-1-1
-            .trix.small
+            .trix
               = safe_join([object.tutor.biography.html_safe])
-
 - else
   .main.col-960-1-1
     .main-box.col-960-1-1
@@ -29,7 +28,7 @@
           %h1= object.title
       - if object.description.presence
         .main-item.col-960-1-1
-          .trix.medium
+          .trix
             = safe_join([object.description.html_safe])
       - if object.body.presence
         .main-item.col-960-1-1
