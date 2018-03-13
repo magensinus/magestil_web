@@ -8,9 +8,25 @@
     padding: 0;
     width: 100%;
   }
+
+  ol,
+  ul {
+    margin: 28px 0;
+    padding: 0 32px;
+    width: 100%;
+    list-style-position: outside;
+    li {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 4px 0;
+      padding: 0;
+    }
+  }
+
   a {
     display: inline-block;
   }
+
   abbr,
   strong,
   code,
