@@ -16,6 +16,11 @@ module ApplicationHelper
     @fetch_categories = Academy::Category.where(published: true, magestil: true)
   end
 
+  # Fetch contact
+  def fetch_contact
+    @fetch_contact ||= Contact.first
+  end
+
   # Fetch networks
   def fetch_networks
     @fetch_networks = Network.all

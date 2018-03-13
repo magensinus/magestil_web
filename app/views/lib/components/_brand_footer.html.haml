@@ -4,3 +4,13 @@
   .brand-footer-box
     .brand-footer-item
       = link_to image_tag("brand-white-large.png", title: "#{fetch_image_title}", size: "152x37"), root_path, class: "link"
+    -#
+      .brand-footer-item
+        - if fetch_contact.phone.presence
+          %p.tiny
+            #{t("contact.phone")}:
+            = fetch_contact.phone
+        - if fetch_contact.email.presence
+          %p.tiny
+            #{t("contact.email")}:
+            = fetch_contact.email
