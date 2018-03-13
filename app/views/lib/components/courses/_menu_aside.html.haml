@@ -12,8 +12,8 @@
       - if parent.tutors.presence
         .menu-aside-item.col-240-1-1
           = link_to "Tutores", course_tutors_path(parent), class: "link small"
-      - if parent.document_box.presence
+      - if parent.document_box_magestil.presence
         .menu-aside-item.col-240-1-1
-          = link_to "Descarregar PDF", parent.document_box.url.to_s, class: "link small", target: "_blank"
+          = link_to "Descarregar PDF", parent.document_box_magestil.url.to_s, class: "link small", target: "_blank"
       .menu-aside-item.col-240-1-1
         = link_to "Pré-inscrições", category_enrollments_path(grandparent), class: "link small"
