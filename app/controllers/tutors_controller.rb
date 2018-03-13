@@ -15,7 +15,7 @@ class TutorsController < ApplicationController
       @academy_category = @academy_course.category
     else
       @tutors = Tutors.first!
-      @documents = Wallet::Category.where(magestil: true).where(wallet_type: "tutors").order(order: :asc)
+      @documents = Wallet::Category.where(magestil: true).where(wallet_type: "tutors").order(position: :asc)
     end
   end
 
