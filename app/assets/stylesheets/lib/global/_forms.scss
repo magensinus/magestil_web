@@ -56,6 +56,7 @@ form {
   }
   input[type=radio],
   input[type=checkbox] {
+    display: inline;
     height: 13px;
     margin: 5px 8px 0 0;
     width: 13px;
@@ -63,6 +64,7 @@ form {
   .checkbox {
     label {
       color: $green;
+      display: inline;
       width: auto;
     }
     &.underline {

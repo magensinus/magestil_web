@@ -44,6 +44,11 @@ img {
   float: left;
 }
 
+.w-row {
+  float: left;
+  width: 100%;
+}
+
 // Media Queries
 
 @media #{$tiny} {
