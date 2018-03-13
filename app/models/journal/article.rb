@@ -13,7 +13,7 @@ module Journal
     accepts_nested_attributes_for :assets, allow_destroy: true
 
     # Uploaders
-    mount_uploader :thumb_box, Journal::ThumbUploader
-    mount_uploader :cover_box, Journal::CoverUploader
+    mount_uploader :thumb_box_magestil, Journal::ThumbUploader
+    mount_uploader :cover_box_magestil, Journal::CoverUploader
   end
 end

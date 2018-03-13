@@ -8,7 +8,7 @@
           = link_to object.title, course_section_path(parent, object), class: "link small"
       - if parent.image_box_magestil.presence
         .menu-aside-item.col-240-1-1
-          = link_to "Estrutura do Curso", "#{parent.image_box_magestil_url}", "data-featherlight" => "image", class: "link small gallery"
+          = link_to "Componentes de Formação", "#{parent.image_box_magestil_url}", "data-featherlight" => "image", class: "link small gallery"
       - if parent.tutors.presence
         .menu-aside-item.col-240-1-1
           = link_to "Tutores", course_tutors_path(parent), class: "link small"

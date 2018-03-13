@@ -8,7 +8,7 @@
       - if @journal_article.title.presence
         .main-item.col-960-1-1
           %h1= @journal_article.title
-      - if @journal_article.cover_box.presence
+      - if @journal_article.cover_box_magestil.presence
         .main-item.col-960-1-1
-          = image_tag @journal_article.cover_box_url.to_s
+          = image_tag @journal_article.cover_box_magestil_url.to_s
   = render "journal_article_assets", object: @journal_article
