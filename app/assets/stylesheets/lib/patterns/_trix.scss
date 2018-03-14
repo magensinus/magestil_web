@@ -25,6 +25,18 @@
 
   a {
     display: inline-block;
+    &:link, &:visited {
+      color: $white;
+      .icon * {
+        fill: $white;
+      }
+    }
+    &:hover, &:active {
+      color: $green;
+      .icon * {
+        fill: $green;
+      }
+    }
   }
 
   abbr,
