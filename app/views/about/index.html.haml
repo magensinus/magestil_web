@@ -3,4 +3,5 @@
 - content_for :theme_class do
   = "set-theme-#{@about.slug}"
 = render "about", object: @about
--# = render "lib/components/themes/basic_theme", object: @about
+%hr.separator.medium
+= render "about_assets"

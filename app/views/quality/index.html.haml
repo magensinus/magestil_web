@@ -1,0 +1,7 @@
+// Index
+
+- content_for :theme_class do
+  = "set-theme-#{@quality.slug}"
+= render "quality", object: @quality
+%hr.separator.medium
+= render "wallet_categories", objects: @wallet_categories

@@ -7,5 +7,7 @@ class CampusController < ApplicationController
   def index
     @campus ||= Campus.first!
     @campus_assets ||= CampusAsset.all
+    @equipment ||= Equipment.first!
+    @equipment_assets ||= EquipmentAsset.all
   end
 end

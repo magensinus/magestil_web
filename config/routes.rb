@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :home,          only: [:index],          controller: :home
   resources :about,         only: [:index],          controller: :about
   resources :campus,        only: [:index],          controller: :campus
-  resources :equipment,     only: [:index],          controller: :equipment
+  # resources :equipment,     only: [:index],          controller: :equipment
+  resources :quality,       only: [:index],          controller: :quality
   resources :partnerships,  only: [:index],          controller: :partnerships
   resources :students,      only: [:index],          controller: :students
   resources :parents,       only: [:index],          controller: :parents

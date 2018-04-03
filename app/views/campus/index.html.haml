@@ -5,4 +5,9 @@
 = render "campus", object: @campus
 %hr.separator.medium
 = render "campus_assets"
-= render "lib/components/themes/basic_theme", object: @campus
+
+- content_for :theme_class do
+  = "set-theme-#{@equipment.slug}"
+= render "equipment", object: @equipment
+%hr.separator.medium
+= render "equipment_assets"

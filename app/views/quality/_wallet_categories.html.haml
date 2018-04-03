@@ -1,0 +1,14 @@
+// Wallet categories
+
+- if objects.presence
+  %hr.separator.medium
+  .main.col-960-1-1
+    .main-box.col-960-1-1
+      - objects.each do |object|
+        - object.assets.each do |asset|
+          .main-item.col-960-2-1.w-col
+            = link_to asset.document_box_url.to_s, class: "link small green", target: "_blank" do
+              - if asset.document_caption.presence
+                = asset.document_caption
+              - else
+                = t("document")

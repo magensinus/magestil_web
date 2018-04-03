@@ -30,7 +30,7 @@ module UrlHelper
       { title: t("urls.home"),          url: root_path,               id: 0 },
       { title: t("urls.about"),         url: about_index_path,        id: 1 },
       { title: t("urls.campus"),        url: campus_path,             id: 2 },
-      { title: t("urls.equipment"),     url: equipment_index_path,    id: 3 },
+      { title: t("urls.quality"),       url: quality_index_path,      id: 3 },
       { title: t("urls.partnerships"),  url: partnerships_path,       id: 4 },
       { title: t("urls.students"),      url: students_path,           id: 5 },
       { title: t("urls.parents"),       url: parents_path,            id: 6 },

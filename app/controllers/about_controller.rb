@@ -6,5 +6,6 @@ class AboutController < ApplicationController
   # /about
   def index
     @about ||= About.first!
+    @about_assets ||= AboutAsset.all
   end
 end

@@ -14,10 +14,7 @@
             .academy-categories-box.col-960-1-1
               - object.courses.order(position: :asc).each do |item|
                 .academy-categories-item{ class: "set-item-#{item.slug}", style: "background-image: url('#{item.thumb_box_magestil_url}'); background-image: image-url('#{item.thumb_box_magestil_url}')" }
-                  - if item.external != true
-                    = link_to item.title, course_path(item), class: "link medium white-green"
-                  - else
-                    = link_to item.title, item.url, class: "link medium white-green", target: "_blank"
+                  = link_to item.title, course_path(item), class: "link medium white-green"
                 = render "courses_theme", object: item
           %hr.separator.medium
 - else
