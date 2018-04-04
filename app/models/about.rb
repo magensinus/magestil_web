@@ -13,4 +13,6 @@ class About < ApplicationRecord
   # ---------
   # Image
   mount_uploader :image_box, Magestil::ImageUploader
+  # Document
+  mount_uploader :document_box, Magestil::DocumentUploader
 end

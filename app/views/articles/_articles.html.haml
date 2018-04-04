@@ -1,15 +1,9 @@
 // Articles
 
-.main.col-960-1-1
-  .main-box.col-960-1-1
+.journal-articles.col-960-1-1
+  .journal-articles-box.col-960-1-1
     - objects.each do |object|
-      - if object.title.presence
-        .main-item.col-960-1-1
-          %h1= object.title
-      - if object.description.presence
-        .main-item.col-960-1-1
-          .trix
-            = safe_join([object.description.html_safe])
-      .main-item.col-960-1-1
-        = link_to t("read_more"), article_path(object), class: "button tiny green left"
-      %hr.separator.medium
+      .journal-articles-item
+        = image_tag object.thumb_box_magestil_url
+        = link_to object.title, article_path(object), class: "link medium white-green"
+        %hr.separator.medium

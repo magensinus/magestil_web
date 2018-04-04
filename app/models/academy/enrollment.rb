@@ -36,5 +36,7 @@ module Academy
     validates :phone, presence: true
     # Courses
     validates :courses, presence: true
+    # Accept terms
+    validates :accept_terms, acceptance: true
   end
 end

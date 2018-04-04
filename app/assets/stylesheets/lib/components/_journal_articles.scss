@@ -1,0 +1,85 @@
+// Academy articles
+
+$class: "journal-articles";
+
+.#{$class} {
+  float: left;
+  .#{$class}-box {
+    float: left;
+    padding: 0;
+    .#{$class}-item {
+      float: left;
+      padding: 8px;
+      width: 472px;
+      img {
+        height: 257px;
+        width: 456px;
+      }
+      .link {
+        font-weight: bold;
+        padding: 0 8px 8px;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        width: 224px;
+        img {
+          height: 117px;
+          width: 208px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        width: 464px;
+        img {
+          height: 252px;
+          width: 448px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        width: 352px;
+        img {
+          height: 189px;
+          width: 336px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        width: 472px;
+        img {
+          height: 257px;
+          width: 456px;
+        }
+      }
+    }
+  }
+}

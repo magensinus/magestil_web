@@ -7,3 +7,9 @@
         = form.text_field :email, placeholder: "O seu email..."
       .main-item.col-960-6-2
         = form.submit "Subscrever", class: "button small green left"
+      -#
+        %hr.separator.medium
+        .main-item.col-960-1-1
+          .checkbox.underline.left
+            = form.check_box :accept_terms, class: "left"
+            = form.label "Autorizo a utilização dos meus dados pessoais para fins de candidatura com vista a receber formação, não podendo os mesmos ser tratados posteriormente de uma forma incompatível com a finalidade aqui referida."

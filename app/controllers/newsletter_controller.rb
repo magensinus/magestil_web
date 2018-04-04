@@ -25,7 +25,8 @@ class NewsletterController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def subscription_params
     params.require(:subscription).permit(
-      :email
+      :email,
+      :accept_terms
     )
   end
 end

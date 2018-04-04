@@ -61,6 +61,11 @@
       = f.label "Telefone"
       = f.text_field :secondary_phone
     %hr.separator.medium
+    .main-item.col-960-1-1
+      .checkbox.underline.left
+        = f.check_box :accept_terms, class: "left"
+        = f.label "Autorizo a utilização dos meus dados pessoais para fins de candidatura com vista a receber formação, não podendo os mesmos ser tratados posteriormente de uma forma incompatível com a finalidade aqui referida."
+    %hr.separator.medium
     .wrapper
       .main-item.col-960-2-1
         = f.submit "Enviar", class: "button small green left"
