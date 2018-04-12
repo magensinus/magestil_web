@@ -5,6 +5,6 @@
     %ul.menu-box
       - fetch_primary_urls.each do |object|
         %li{ class: "menu-item responsive-hide #{active_class(object[:url])}" }
-          = link_to object[:title], object[:url], class: "link nano white-green responsive-hide"
+          = link_to object[:title], object[:url], class: "link tiny white-green responsive-hide"
       %li{ class: "menu-item responsive" }
-        = link_to image_tag("menu.png", title: "#{fetch_image_title}"), "#", class: "off link icon menu-responsive-trigger responsive"
+        = link_to image_tag("menu.png", title: "#{fetch_image_title}"), "#", class: "off link tiny icon menu-responsive-trigger responsive"
