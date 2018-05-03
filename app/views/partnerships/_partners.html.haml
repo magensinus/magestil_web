@@ -4,4 +4,7 @@
   .partnerships-identities-box.col-960-1-1
     - objects.each do |object|
       .partnerships-identities-item
-        %p= object.title
+        - if object.thumb_box.presence
+          = image_tag(object.thumb_box_url, title: "#{fetch_image_title}", size: "224x119")
+        - else
+          %p= object.title

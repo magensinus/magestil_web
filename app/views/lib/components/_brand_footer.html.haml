@@ -3,7 +3,9 @@
 .brand-footer
   .brand-footer-box
     .brand-footer-item
-      = link_to image_tag("brand-white-large.png", title: "#{fetch_image_title}", size: "152x37"), root_path, class: "link"
+      = link_to image_tag("brand-white-large.png", title: "#{fetch_image_title}", size: "136x32"), root_path, class: "link"
+    .brand-footer-item
+      = link_to image_tag("brand-eml-icon-bw.png", title: "#{fetch_image_title}", size: "61x32"), "http://www.escolamodalisboa.eu/", class: "link", target: "_blank"
     -#
       .brand-footer-item
         - if fetch_contact.phone.presence
