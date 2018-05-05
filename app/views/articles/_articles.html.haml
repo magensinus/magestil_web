@@ -1,9 +1,9 @@
 // Articles
 
 .journal-articles.col-960-1-1
-  .journal-articles-box.col-960-1-1.w-col
+  .journal-articles-box.col-960-1-1
     - objects.each do |object|
-      .journal-articles-item
+      .journal-articles-item.w-col
         = image_tag object.thumb_box_magestil_url
         = link_to object.title, article_path(object), class: "link medium white-green"
         %hr.separator.medium
