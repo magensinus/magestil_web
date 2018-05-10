@@ -16,7 +16,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
 
-      gtag("config", #{ENV["GOOGLE_ID"]});
+      gtag("config", "#{ENV["GOOGLE_ID"]}");
   %body.home
     // Header
     .universal#header
