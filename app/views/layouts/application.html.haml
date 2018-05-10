@@ -9,6 +9,14 @@
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
+    // Google Analytics
+    %script{ src: "https://www.googletagmanager.com/gtag/js?id=#{ENV["GOOGLE_ID"]}" }
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", #{ENV["GOOGLE_ID"]});
   %body.home
     // Header
     .universal#header
@@ -45,10 +53,3 @@
           = render "lib/components/badges"
         .universal-item
           = render "lib/components/copyright"
-    // Google Analytics
-    %script{ src: "https://www.googletagmanager.com/gtag/js?id=#{ENV["GOOGLE_ID"]}" }
-    :javascript
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", #{ENV["GOOGLE_ID"]});
