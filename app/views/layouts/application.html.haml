@@ -46,10 +46,9 @@
         .universal-item
           = render "lib/components/copyright"
     // Google Analytics
-    %script{ src: "https://www.googletagmanager.com/gtag/js?id=UA-118958228-1" }
+    %script{ src: "https://www.googletagmanager.com/gtag/js?id=#{ENV["GOOGLE_ID"]}" }
     :javascript
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
-
-      gtag("config", "UA-118958228-1");
+      gtag("config", #{ENV["GOOGLE_ID"]});
