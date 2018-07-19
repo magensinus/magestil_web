@@ -6,6 +6,9 @@
   font-size: 18px;
   margin: 0;
   padding: 0;
+  &.text-center {
+    text-align: center;
+  }
   &.wide {
     width: 100%;
   }
@@ -89,6 +92,20 @@
       color: $green;
       .icon * {
         fill: $green;
+      }
+    }
+  }
+  &.white-green-darker {
+    &:link, &:visited {
+      color: $white;
+      .icon * {
+        fill: $white;
+      }
+    }
+    &:hover, &:active {
+      color: $green-darker;
+      .icon * {
+        fill: $green-darker;
       }
     }
   }

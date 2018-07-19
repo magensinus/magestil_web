@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # /articles
   def index
     @articles ||= Articles.first!
-    @journal_articles ||= Journal::Article.where(magestil: true).order(published_at: :desc)
+    @journal_articles ||= Journal::Article.where(published: true, magestil: true).order(published_at: :desc)
   end
 
   # /articles/Hgy897jgfv

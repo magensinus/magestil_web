@@ -18,6 +18,12 @@
 
       gtag("config", "#{ENV["GOOGLE_ID"]}");
   %body.home
+    - if current_page?(root_path) || current_page?("/home")
+      // Featured
+      .universal#featured
+        .universal-box
+          .universal-item
+            = render "lib/components/featured"
     // Header
     .universal#header
       .universal-box
