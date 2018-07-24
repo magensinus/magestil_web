@@ -18,7 +18,7 @@
 
       gtag("config", "#{ENV["GOOGLE_ID"]}");
   %body.home
-    - if current_page?(root_path) || current_page?("/home")
+    - if fetch_featured_article.presence && (current_page?(root_path) || current_page?("/home"))
       // Featured
       .universal#featured
         .universal-box
