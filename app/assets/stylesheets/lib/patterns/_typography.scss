@@ -108,10 +108,12 @@ blockquote {
 
 ol,
 ul {
+  color: $white;
   margin: 0;
   padding: 0;
   width: 100%;
   li {
+    color: $white;
     line-height: 1;
     margin: 0;
     padding: 0;
