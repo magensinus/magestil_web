@@ -26,6 +26,14 @@ $class: "universal";
       width: 100%;
     }
   }
+  .#{$class}-wide {
+    @include border-box;
+    @include clearfix;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
 }
 
 // Media Queries

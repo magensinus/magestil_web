@@ -4,16 +4,16 @@ $class: "sitemap";
 
 .#{$class} {
   float: right;
-  width: 720px;
+  width: 960px;
   .#{$class}-box {
     @include clear-list;
     float: left;
     padding: 6px;
-    width: 720px;
+    width: inherit;
     .#{$class}-item {
       float: left;
       padding: 2px;
-      width: 236px;
+      width: 237px;
       .link {
         background-color: $blue-darker;
         color: $white;
@@ -53,7 +53,6 @@ $class: "sitemap";
   .#{$class} {
     width: 240px;
     .#{$class}-box {
-      width: 240px;
       .#{$class}-item {
         width: 228px;
       }
@@ -66,7 +65,6 @@ $class: "sitemap";
     float: left;
     width: 480px;
     .#{$class}-box {
-      width: 480px;
       .#{$class}-item {
         width: 234px;
       }
@@ -76,11 +74,10 @@ $class: "sitemap";
 
 @media #{$medium} {
   .#{$class} {
-    width: 480px;
+    width: 720px;
     .#{$class}-box {
-      width: 480px;
       .#{$class}-item {
-        width: 234px;
+        width: 236px;
       }
     }
   }
@@ -88,8 +85,10 @@ $class: "sitemap";
 
 @media #{$large} {
   .#{$class} {
+    width: 960px;
     .#{$class}-box {
       .#{$class}-item {
+        width: 237px;
       }
     }
   }

@@ -5,19 +5,23 @@
 altai_off@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/altai_off/-/altai_off-1.0.2.tgz#58032164a160341f8a18f218b618f2947dfb960e"
+  integrity sha1-WAMhZKFgNB+KGPIYthjylH37lg4=
   dependencies:
     jquery "^3.0.0"
 
 altai_toggle@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/altai_toggle/-/altai_toggle-1.0.8.tgz#76c79f5351dff7087c6ec9fa63ad13d227b8f884"
+  integrity sha1-dsefU1Hf9wh8bsn6Y60T0ie4+IQ=
   dependencies:
     jquery "^3.0.0"
 
 featherlight@^1.7.12:
   version "1.7.12"
   resolved "https://registry.yarnpkg.com/featherlight/-/featherlight-1.7.12.tgz#8cb0b38cf819ea1d5f6896f97825ceda9790593f"
+  integrity sha1-jLCzjPgZ6h1faJb5eCXO2peQWT8=
 
 jquery@^3.0.0, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==

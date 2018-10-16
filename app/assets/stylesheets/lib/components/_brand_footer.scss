@@ -4,15 +4,19 @@ $class: "brand-footer";
 
 .#{$class} {
   float: left;
-  width: 240px;
+  width: 100%;
+  h5 {
+    color: $blue-darker;
+    text-align: center;
+  }
   .#{$class}-box {
     @include clear-list;
     float: left;
-    width: 100%;
+    width: auto;
     .#{$class}-item {
       float: left;
-      padding: 8px;
-      width: 100%;
+      padding: 8px 16px;
+      width: auto;
       .link {
         float: left;
         img {

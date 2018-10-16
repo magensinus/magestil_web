@@ -50,12 +50,16 @@
             .universal-item
     // Footer
     .universal#footer
+      .universal-wide
+        = render "lib/components/networks"
       .universal-box
         .universal-item
           = render "lib/components/sitemap"
-          = render "lib/components/networks"
+        .universal-item
+          %hr.separator.medium
           = render "lib/components/brand_footer"
+          %hr.separator.medium
         .universal-item
           = render "lib/components/badges"
-        .universal-item
-          = render "lib/components/copyright"
+      .universal-wide.blue-darker-bg
+        = render "lib/components/copyright"

@@ -1,18 +1,21 @@
 // Brand footer
 
 .brand-footer
-  .brand-footer-box
-    .brand-footer-item
-      = link_to image_tag("brand-white-large.png", title: "#{fetch_image_title}", size: "136x32"), root_path, class: "link"
-    .brand-footer-item
-      = link_to image_tag("brand-eml-icon-bw.png", title: "#{fetch_image_title}", size: "61x32"), "http://www.escolamodalisboa.eu/", class: "link", target: "_blank"
-    -#
-      .brand-footer-item
-        - if fetch_contact.phone.presence
-          %p.tiny
-            #{t("contact.phone")}:
-            = fetch_contact.phone
-        - if fetch_contact.email.presence
-          %p.tiny
-            #{t("contact.email")}:
-            = fetch_contact.email
+  %h5.tiny.mono Grupo Magensinus
+  .center-parent
+    .center-child
+      .brand-footer-box
+        .brand-footer-item
+          = link_to image_tag("brand-white-large.png", title: "#{fetch_image_title}", size: "136x32"), root_path, class: "link"
+        .brand-footer-item
+          = link_to image_tag("brand-eml-extended-colour.png", title: "#{fetch_image_title}", size: "193x32"), "http://www.escolamodalisboa.eu/", class: "link", target: "_blank"
+        -#
+          .brand-footer-item
+            - if fetch_contact.phone.presence
+              %p.tiny
+                #{t("contact.phone")}:
+                = fetch_contact.phone
+            - if fetch_contact.email.presence
+              %p.tiny
+                #{t("contact.email")}:
+                = fetch_contact.email
