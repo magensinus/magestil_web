@@ -1,15 +1,6 @@
 // Networks
 
 - if fetch_networks.presence
-  %nav.networks
-    %ul.networks-box
-      - fetch_networks.each do |object|
-        %li.networks-item
-          = link_to image_tag(object.thumb_box_url.to_s, class: "left", height: "24"), object.url, class: "link left", target: "_blank"
-      %li.networks-item
-        = link_to image_tag("https://via.placeholder.com/24x24", class: "left", height: "24"), "#", class: "link left", target: "_blank"
-
-- if fetch_networks.presence
   .networks
     %h3 Segue-nos
     %hr.separator.small
