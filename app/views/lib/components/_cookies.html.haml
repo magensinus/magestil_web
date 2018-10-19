@@ -1,0 +1,16 @@
+- unless cookies[:WeLoveCookies].presence
+  .cookies
+    .cookies-box
+      .cookies-item
+        %p.tiny.text-center
+          Ao continuar a navegar está a concordar com a utilização de cookies neste site.
+          %br
+          Para mais informações, consulte os nossos
+          - fetch_terms_and_conditions_urls.each do |object|
+            = link_to object[:title], object[:url], class: "link tiny white-green"
+          \.
+      .cookies-item
+        %hr.separator.small
+        .center-parent
+          .center-child
+            = link_to "Aceitar", "#", class: "off button green tiny we_love_cookies"

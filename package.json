@@ -2,9 +2,10 @@
   "name": "magestil_web",
   "private": true,
   "dependencies": {
-    "altai_off": "^1.0.2",
-    "altai_toggle": "^1.0.8",
-    "featherlight": "^1.7.12",
-    "jquery": "^3.3.1"
+    "altai_off": "^1.0",
+    "altai_toggle": "^1.0",
+    "featherlight": "^1.7",
+    "jquery": "^3.3",
+    "js-cookie": "^2.2"
   }
 }

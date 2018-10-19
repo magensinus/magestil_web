@@ -1,4 +1,6 @@
 .trix {
+  float: left;
+  width: 100%;
   p,
   div {
     color: $white;
@@ -81,20 +83,18 @@
     padding: 0;
   }
   .text,
-  .image,
   .document,
   .video {
     float: left;
     width: 100%;
   }
-
   .image {
-	margin: 0 auto;
+  	margin: 0 auto;
     float: left;
-    width: 720px;
-	img {
-		width: 720px;
-	}
+    width: 704px;
+  	img {
+  		width: 100%;
+  	}
   }
   &.medium {
     p,
@@ -108,6 +108,45 @@
     p,
     div {
       color: $blue-light;
+    }
+  }
+}
+
+
+// Media Queries
+
+@media #{$tiny} {
+  .trix {
+    .image {
+      padding: 0;
+      width: 224px;
+    }
+  }
+}
+
+@media #{$small} {
+  .trix {
+    .image {
+      padding: 0;
+      width: 464px;
+    }
+  }
+}
+
+@media #{$medium} {
+  .trix {
+    .image {
+      padding: 0;
+      width: 704px;
+    }
+  }
+}
+
+@media #{$large} {
+  .trix {
+    .image {
+      padding: 0;
+      width: 704px;
     }
   }
 }

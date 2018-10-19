@@ -1,0 +1,9 @@
+// Index
+
+.panel-one
+  .main.col-960-1-1
+    .main-box.col-960-1-1
+      - if @terms_and_conditions.title.presence
+        .main-item.col-960-1-1
+          %h1= @terms_and_conditions.title
+= render "legal_articles", objects: @legal_articles

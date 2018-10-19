@@ -1,0 +1,60 @@
+// Cookies
+
+$class: "cookies";
+
+.#{$class} {
+  background-color: $black;
+  bottom: 0;
+  float: left;
+  left: 0;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  .#{$class}-box {
+    float: left;
+    width: 100%;
+    .#{$class}-item {
+      float: left;
+      width: 100%;
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$tiny} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

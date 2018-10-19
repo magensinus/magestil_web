@@ -42,6 +42,13 @@ module UrlHelper
     ]
   end
 
+  # Fetch terms and conditions url's
+  def fetch_terms_and_conditions_urls
+    [
+      { title: t("urls.terms_and_conditions"), url: terms_and_conditions_path, id: 0 }
+    ]
+  end
+
   # Active Link
   def active_class(link_path)
     current_page?(link_path) ? "active" : ""

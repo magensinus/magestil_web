@@ -1,0 +1,10 @@
+// Terms and conditions
+
+- if fetch_terms_and_conditions_urls.presence
+  .center-parent
+    .center-child
+      .terms-and-conditions
+        .terms-and-conditions-box
+          - fetch_terms_and_conditions_urls.each do |object|
+            .terms-and-conditions-item{ class: "#{active_class(object[:url])}" }
+              = link_to object[:title], object[:url], class: "link mono tiny left white-green"

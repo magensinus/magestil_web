@@ -1,6 +1,4 @@
 =begin
-=end
-
 # Create Magestil Settings
 Magestil::Settings.create(
   title: "",
@@ -95,3 +93,11 @@ Magestil::Newsletter.create(
   title: "Fusce Nullam Elit",
   description: "<div>Vestibulum id ligula porta felis euismod semper.</div>"
 )
+
+# Create Magestil Terms and Conditions
+Magestil::TermsAndConditions.create(
+  meta_title: "",
+  meta_description: "",
+  meta_url: ""
+)
+=end

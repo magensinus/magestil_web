@@ -9,14 +9,16 @@
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
-    // Google Analytics
-    %script{ src: "https://www.googletagmanager.com/gtag/js?id=#{ENV["GOOGLE_ID"]}" }
-    :javascript
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
+    // We Love Cookies
+    - if cookies[:WeLoveCookies].presence
+      // Google Analytics
+      %script{ src: "https://www.googletagmanager.com/gtag/js?id=#{ENV["GOOGLE_ID"]}" }
+      :javascript
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
 
-      gtag("config", "#{ENV["GOOGLE_ID"]}");
+        gtag("config", "#{ENV["GOOGLE_ID"]}");
   %body.home
     - if fetch_featured_article.presence && (current_page?(root_path) || current_page?("/home"))
       // Featured
@@ -63,4 +65,10 @@
           = render "lib/components/badges"
           %hr.separator.tiny
       .universal-wide.blue-darker-bg
+        %hr.separator.small
+        = render "lib/components/terms_and_conditions"
+        %hr.separator.nano
+      .universal-wide.blue-darker-bg
         = render "lib/components/copyright"
+        %hr.separator.tiny
+    = render "lib/components/cookies"

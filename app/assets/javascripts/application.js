@@ -13,9 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery/dist/jquery
+//= require js-cookie/src/js.cookie
 //= require featherlight/src/featherlight
 //= require featherlight/src/featherlight.gallery
 //= require plugins/set_panel
+//= require plugins/set_we_love_cookies
 //= require altai_off/dist/altai_off
 //= require altai_toggle/dist/altai_toggle
 //= require initializer

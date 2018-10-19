@@ -2,6 +2,7 @@
 
 bindEvents = function() {
   $(".off").altaiOff();
+  $.set_we_love_cookies();
   // $(".panel").setPanel({ trim: 176 });
   $(".menu-responsive").altaiToggle({
     effect: "slide",
