@@ -71,4 +71,12 @@
       .universal-wide.blue-darker-bg
         = render "lib/components/copyright"
         %hr.separator.tiny
+      - if cookies[:WeLoveCookies].presence
+        .universal-wide.black-bg
+          %p.tiny.text-center
+            Ao continuar a navegar está a concordar com a utilização de cookies neste site.
+            %br
+            Para mais informações, consulte os nossos
+            - fetch_terms_and_conditions_urls.each do |object|
+              = link_to object[:title], object[:url], class: "link tiny white-green"
     = render "lib/components/cookies"

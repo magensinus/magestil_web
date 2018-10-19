@@ -5,14 +5,16 @@ $black: rgba(0, 0, 0, 1);
 $white: rgba(255, 255, 255, 1);
 
 // White backgrounds
-.white-bg {
-  background-color: $white;
-}
+.white-bg { background-color: $white !important; }
 
 // White fonts
-.white-ft {
-  color: $white;
-}
+.white-ft { color: $white !important; }
+
+// Black backgrounds
+.black-bg { background-color: $black !important; }
+
+// Black fonts
+.black-ft { color: $black !important; }
 
 // Gray
 $gray-lightest: #babec3;
@@ -24,9 +26,7 @@ $gray-darker:   #3a3f44;
 $gray-darkest:  #232528;
 
 // Gray backgrounds
-.gray-lightest-bg {
-  background-color: $gray-lightest;
-}
+.gray-lightest-bg { background-color: $gray-lightest; }
 .gray-lighter-bg {
   background-color: $gray-lighter;
 }
@@ -48,25 +48,25 @@ $gray-darkest:  #232528;
 
 // Gray fonts
 .gray-lightest-ft {
-  color: $gray-lightest;
+  color: $gray-lightest !important;
 }
 .gray-lighter-ft {
-  color: $gray-lighter;
+  color: $gray-lighter !important;
 }
 .gray-light-ft {
-  color: $gray-light;
+  color: $gray-light !important;
 }
 .gray-ft {
-  color: $gray;
+  color: $gray !important;
 }
 .gray-dark-ft {
-  color: $gray-dark;
+  color: $gray-dark !important;
 }
 .gray-darker-ft {
-  color: $gray-darker;
+  color: $gray-darker !important;
 }
 .gray-darkest-ft {
-  color: $gray-darkest;
+  color: $gray-darkest !important;
 }
 
 // Blue
@@ -141,10 +141,10 @@ $green-darkest:   #0c1205;
   background-color: $green-lighter;
 }
 .green-light-bg {
-  background-color: $green-light;
+  background-color: $green-light !important;
 }
 .green-bg {
-  background-color: $green;
+  background-color: $green !important;
 }
 .green-dark-bg {
   background-color: $green-dark;
