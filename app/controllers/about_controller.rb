@@ -6,6 +6,7 @@ class AboutController < ApplicationController
   # /about
   def index
     @about ||= About.first!
-    @about_assets ||= AboutAsset.all
+    @about_assets ||= AboutAsset.where(image: false)
+    @about_image_assets ||= AboutAsset.where(image: true)
   end
 end

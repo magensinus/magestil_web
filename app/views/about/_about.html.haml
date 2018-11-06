@@ -10,7 +10,8 @@
         .trix
           = safe_join([object.description.html_safe])
 %hr.separator.medium
-= render "about_assets"
+- if @about_image_assets.presence
+  = render "about_image_assets"
 %hr.separator.medium
 .main.col-960-1-1
   .main-box.col-960-1-1
@@ -25,3 +26,5 @@
             = object.document_caption
           - else
             = t("document")
+- if @about_assets.presence
+  = render "about_assets"
