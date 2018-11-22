@@ -18,6 +18,30 @@ form {
     margin: 0;
     padding: 0;
     width: 100%;
+    &.nano {
+      font-size: 12px;
+    }
+    &.tiny {
+      font-size: 14px;
+    }
+    &.no-underline {
+      text-decoration: none !important;
+    }
+    a {
+      display: inline-block;
+      &:link, &:visited {
+        color: $white;
+        .icon * {
+          fill: $white;
+        }
+      }
+      &:hover, &:active {
+        color: $green;
+        .icon * {
+          fill: $green;
+        }
+      }
+    }
   }
   input {
     @include border-corner(4px);
