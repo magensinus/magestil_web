@@ -14,9 +14,9 @@
           = truncate(object.description, length: 240, escape: false)
     .billboard-item.bottom
       - if object.external != true
-        = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left"
+        = link_to t("more_info"), course_sections_path(object), class: "button tiny green left"
       - else
-        = link_to t("more_info"), object.url, class: "button tiny white-green left", target: "_blank"
+        = link_to t("more_info"), object.url, class: "button tiny green left", target: "_blank"
     -#
       .billboard-item.bottom
         = link_to t("more_info"), course_sections_path(object), class: "button tiny white-green left", style: "color: #{object.font_color_one} !important; background-color: #{object.background_color_one} !important;"
